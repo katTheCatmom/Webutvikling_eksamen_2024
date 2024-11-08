@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="ikoner/css/fontawesome.css" rel="stylesheet"/> 
-    <link href="ikoner/css/brands.css" rel="stylesheet"/>
-    <link href="ikoner/css/solid.css" rel="stylesheet"/>
+    <link href="ikoner/css/fontawesome.css" rel="stylesheet"> 
+    <link href="ikoner/css/brands.css" rel="stylesheet">
+    <link href="ikoner/css/solid.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
@@ -14,14 +14,15 @@
             <label for="search">Søk</label>
             <input type="search" placeholder="søk her" id="search">
             <input type="submit" value="søk">
+            <i class="fa-solid fa-magnifying-glass"></i>
         </form>
         <nav>
             <ul>
-                <li>Hjem</li>
-                <li>Produkter</li>
-                <li>LOGO</li>
-                <li>Kategorier</li>
-                <li>Kontakt oss</li>
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="#populaereProdukter">Produkter</a></li>
+                <li><a href="index.html">LOGO</a></li>      <!-- FIKS LOGO -->
+                <li><a href="#populaereKategorier">Kategorier</a></li>
+                <li><a href="#kontaktOss">Kontakt oss</a></li>
             </ul>
         </nav>
         <section>
@@ -31,13 +32,129 @@
         </section>
     </header>
     <main>
+                    <!-- Slider -->
+        <section>
+            <!-- Kanskje mest hensiktsmessig å benytte <picture>. Husk Media queries-->
+            <img src="https://picsum.photos/id/267/200/300" alt="slider"> <!-- !! bedre alt !! -->
+        </section>
+
+                    <!-- Mest populære produkter -->
+        <section>
+            <article id="populaereProdukter">
+                <h2>Våre mest populære produkter</h2>
+                <p>Oppdag det beste av det beste</p>
+                <!-- !!! Statiske knapper for filtrering !!!-->
+                <!-- <button>(?) for:
+                        - New product
+                        - Special price
+                        - Best sellers
+                -->
+            </article>
+            
+            <!-- Produktkort: -->
+             <!-- section i section: https://stackoverflow.com/questions/9916354/is-it-valid-to-have-a-section-tag-inside-another-section-tag -->
+            <section>
+                <article>
+                    <!-- Bilde -->
+                    <picture>
+                        <!-- <source> for mediaqueries må huskes!-->
+                        <img src="https://picsum.photos/id/177/200/300" alt="produktkort"> <!-- Finn bedre alt, evt størrelse også. -->
+                    </picture>
+                     
+                    <!-- Produktnavn -->
+                    <a href="product.html">Product name</a>
+                    <!-- Pris -->                                   <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
+                    <p>Kr 1900,-</p>
+                    <!-- Stjerner -->                               <!-- !! microdata !! -->
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <!-- Liten tekst om antall anmeldelser -->      <!-- !! microdata !! -->
+                    <p>842</p>
+                </article>
+            </section>
+        </section>
+
+                    <!--Mest populære kategorier -->
+        <section>
+            <article id="populaereKategorier">
+                <h2>Våre mest populære kategorier</h2>
+                <p>Oppdag det beste av det beste</p>
+            </article>
+            <section>
+                <!-- Her skal kategorikortene komme! -->
+                <article>
+                    <!-- Ha de begge inni en <a> tag på noe vis. Også z(?)-index for at bildet havner i bakgrunn, for så å sentrere "kategori 1" midten oppå-->
+                    <a href="product.html">
+                        <img src="https://picsum.photos/id/21/200/300" alt="kategori 1">
+                        <h3>Kategori 1</h3>
+                    </a>
+                </article>
+                <article>
+                    <img src="https://picsum.photos/id/248/200/300" alt="kategori 2">
+                    <h3>Kategori 2</h3>
+                </article>
+                <article>
+                    <img src="https://picsum.photos/id/26/200/300" alt="kategori 3">
+                    <h3>Kategori 3</h3>
+                </article>
+                <article>
+                    <img src="https://picsum.photos/id/157/200/300" alt="kategori 4">
+                    <h3>Kategori 4</h3>
+                </article>
+                <article>
+                    <img src="https://picsum.photos/id/96/200/300" alt="Kategori 5">
+                    <h3>Kategori 5</h3>
+                </article>
+            </section>
+        </section>
+
+                    <!-- Anmeldelser -->
         <section>
             <article>
-            
+                <!-- bilde -->
+                <!-- overskrift -->
+                <!-- Tekstparagraf -->
+                <!-- stjerner -->
             </article>
+            <article></article>
+            <article></article>
+            <article></article>
         </section>
     </main>
     <aside></aside>
-    <footer></footer>
+    <footer>   <!-- Hva slags inndelinger er lov i footer??? Finner jo ingenting her (hverken forelesninger eller nett(bortsett fra <div> og mye </br>....)).-->
+        <section>
+            <h3>LOGO</h3>   <!-- FIKS LOGO -->
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            </p>
+        </section>
+        <section id="kontaktOss">
+            <h4>KONTAKT</h4>
+            <p>Adresse: B R A Veien 4, 1757 Halden</p> <!-- Er det en egen href for adresse?-->
+            <p>Telefon: <a href="tel:+469608000">(+47) 69 60 80 00</a></p>
+            <p>E-post: <a href="mailto:halden@hiof.no">halden@hiof.no</a></p>
+            <p>Åpningstider: Stenger 15:00</p>
+        </section>
+        <section>
+            <nav>
+                <h4>Snarveier</h4>
+                <ul>
+                    <li><a href="#populaereProdukter">Produkter</a></li>
+                    <li><a href="#populaereKategorier">Kategorier</a></li>
+                    <li><a href="#kontaktOss">Kontakt oss</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section>
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://no.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://no.pinterest.com/"><i class="fa-brands fa-pinterest"></i></a>
+        </section>
+    </footer>
 </body>
 </html>
