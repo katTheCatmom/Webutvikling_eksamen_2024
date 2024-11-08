@@ -6,6 +6,7 @@
     <link href="ikoner/css/fontawesome.css" rel="stylesheet"> 
     <link href="ikoner/css/brands.css" rel="stylesheet">
     <link href="ikoner/css/solid.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
@@ -25,11 +26,11 @@
                 <li><a href="#kontaktOss">Kontakt oss</a></li>
             </ul>
         </nav>
-        <section>
-            <i class="fa-regular fa-user"></i> <!-- User icon-->
-            <i class="fa-regular fa-heart"></i> <!-- Heart icon -->
-            <a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a> <!-- Shopping cart-->
-        </section>
+        <ul>
+            <li><i class="fa-regular fa-user"></i></li> <!-- User icon-->
+            <li><i class="fa-regular fa-heart"></i></li> <!-- Heart icon -->
+            <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li> <!-- Shopping cart-->
+        </ul>
     </header>
     <main>
                     <!-- Slider -->
@@ -44,11 +45,17 @@
                 <h2>Våre mest populære produkter</h2>
                 <p>Oppdag det beste av det beste</p>
                 <!-- !!! Statiske knapper for filtrering !!!-->
-                <!-- <button>(?) for:
-                        - New product
-                        - Special price
-                        - Best sellers
-                -->
+                <ul>
+                    <li> <!-- Velger å bruke <a> her, fordi de skal være statiske. De linker til produkter. Gir også den 'hånda' når man :hover-->
+                        <a href="#populaereProdukter">New Product</a>
+                    </li>
+                    <li>
+                        <a href="#populaereProdukter">Special Price</a>
+                    </li>
+                    <li>
+                        <a href="populaereProdukter">Best Sellers</a>
+                    </li>
+                </ul>
             </article>
             
             <!-- Produktkort: -->
@@ -59,20 +66,24 @@
                     <picture>
                         <!-- <source> for mediaqueries må huskes!-->
                         <img src="https://picsum.photos/id/177/200/300" alt="produktkort"> <!-- Finn bedre alt, evt størrelse også. -->
+                        <i class="fa-regular fa-heart"></i>
                     </picture>
-                     
+
                     <!-- Produktnavn -->
                     <a href="product.html">Product name</a>
+
                     <!-- Pris -->                                   <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
                     <p>Kr 1900,-</p>
+
                     <!-- Stjerner -->                               <!-- !! microdata !! -->
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-regular fa-star"></i>
+
                     <!-- Liten tekst om antall anmeldelser -->      <!-- !! microdata !! -->
-                    <p>842</p>
+                    <p>842 Reviews</p>
                 </article>
             </section>
         </section>
@@ -113,15 +124,22 @@
 
                     <!-- Anmeldelser -->
         <section>
+            <!-- overskrift -->
+            <h2>Anmeldelser</h2>
             <article>
                 <!-- bilde -->
-                <!-- overskrift -->
-                <!-- Tekstparagraf -->
+                <img src="https://picsum.photos/id/40/200/300" alt="Anmelder">
+                <!-- Navn -->
+                <p>Mari Coon</p>
                 <!-- stjerner -->
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <!-- Anmeldertekst -->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce malesuada, erat et feugiat varius, nibh nulla venenatis quam, id ultricies quam libero quis ex. Nulla posuere arcu nec nibh dictum viverra. Quisque ligula lorem, fringilla in est a, commodo sodales ipsum. Maecenas et efficitur lorem.</p>
             </article>
-            <article></article>
-            <article></article>
-            <article></article>
         </section>
     </main>
     <aside></aside>
