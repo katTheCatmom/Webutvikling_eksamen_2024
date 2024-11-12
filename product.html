@@ -40,29 +40,243 @@
 
         <!-- Område 2 Produktinfo-->
         <section>               <!-- SJekk inspector for shoosies (uke 44, 01.11)-->
-            <!-- Overskrift - Produktnavn -->
-            <h1>Produktnavn</h1>
-              <!-- Lenke til merke -->
-            <a href="#">MERKENAVN</a>      <!-- Fiks lenke, ikke #--> 
-            <!-- Pris -->
-            <p>5 195 kr inkl. mva.</p>
-            <p>Farge: Beige</p>
-            <!-- Farge-informasjon -->
-            <!-- Nedtrekksmeny (valg av strl) -->
-            <!-- "Legg til i handlekurv" knapp-->
-            <!--  Favorittknapp -->
-            <!--  Ekstra informasjon
-                    - Materiale og vedlikehold
-                    - Produktdetaljer
-                    - Størrelsestabel
-                    - Anmeldelser 
-            -->
+           <header>
+                <!-- Overskrift - Produktnavn -->
+                <h1>Produktnavn</h1>
+                <!-- Lenke til merke -->
+                <h3><a href="#">MERKENAVN</a></h3>    <!-- Fiks lenke, ikke #-->
+            </header> 
+            <section>
+                <ul>
+                    <!-- Pris -->
+                    <li><p>5 195 kr inkl. mva.</p></li>
+                    <!-- Farge-informasjon -->
+                    <li><p>Farge: Beige</p></li>
+                </ul>
+            </section>
+          
+            <!-- Nedtrekksmeny (valg av strl). Hentet fra uke44, 01.11  -->
+            <section>
+                <form>
+                    <label for="size">Size:</label>
+                    <select name="size" id="size">
+                        <option value="Velg størrelse">Velg størrelse</option>
+                        <option value="XS">XS</option>      <!-- Sjekk om det er "lovlige" values-->
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                    <!-- "Legg til i handlekurv" knapp-->
+                    <button>Legg til i handlekurv</button>
+                </form>
+                <!--  Favorittknapp -->
+                <button><i class="fa-regular fa-heart"></i></button>
+            </section>
+            
+            <!-- Materiale og vedlikehold -->
+            <section>
+                <h3>Materiale og vedlikehold</h3>
+                <ul>
+                    <li>
+                        <p>Overmateriale: 95% viskose, 5% elastan</p>
+                    </li>
+                    <li>
+                        <p>Materiale ermer: 100% polyester</p>
+                    </li>
+                    <li>
+                        <p>Materiale: Jersey</p>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Produktdetaljer -->
+            <section>
+                <h3>Produktdetaljer</h3>
+                <p>Maecenas rhoncus scelerisque ex vel placerat. Proin quis tellus turpis. Pellentesque eget dolor ornare, blandit ligula vitae, fringilla quam. Maecenas lectus massa, eleifend ac elit ut, eleifend sollicitudin justo. Sed tempus eget metus vitae pulvinar. Nam molestie massa vitae euismod vulputate.</p>
+            </section>
+
+            <!-- Størrelsestabell -->
+            <section>
+                <h3>Størrelsestabell</h3>
+                <p>
+                    Sjekk hvordan din vanlige størrelse konverterer til andre
+                    størrelser i vår størrelsesguide. Husk at dette er en
+                    generell guide og at størrelsene kan variere i forhold til
+                    merke og modell.
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>EU</th>
+                            <th>INT</th>
+                            <th>BRYSTVIDDE</th>
+                            <th>LIVVIDDE</th>
+                            <th>HOFTEMÅL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>32</td>
+                            <td>XXS</td>
+                            <td>76</td>
+                            <td>63</td>
+                            <td>85</td>
+                        </tr>
+                        <tr>
+                            <td>34</td>
+                            <td>XS</td>
+                            <td>80</td>
+                            <td>66</td>
+                            <td>89</td>
+                        </tr>
+                        <tr>
+                            <td>36</td>
+                            <td>S</td>
+                            <td>84</td>
+                            <td>69</td>
+                            <td>93</td>
+                        </tr>
+                        <tr>
+                            <td>38</td>
+                            <td>M</td>
+                            <td>88</td>
+                            <td>72</td>
+                            <td>97</td>
+                        </tr>
+                        <tr>
+                            <td>40</td>
+                            <td>L</td>
+                            <td>92</td>
+                            <td>76</td>
+                            <td>100</td>
+                        </tr>
+                        <tr>
+                            <td>42</td>
+                            <td>XL</td>
+                            <td>96</td>
+                            <td>80</td>
+                            <td>103</td>
+                        </tr>
+                        <tr>
+                            <td>44</td>
+                            <td>XXL</td>
+                            <td>100</td>
+                            <td>85</td>
+                            <td>106</td>
+                        </tr>
+                        <tr>
+                            <td>46</td>
+                            <td>3XL</td>
+                            <td>104</td>
+                            <td>90</td>
+                            <td>109</td>
+                        </tr>
+                        <tr>
+                            <td>48</td>
+                            <td>4XL</td>
+                            <td>110</td>
+                            <td>96.5</td>
+                            <td>114</td>
+                        </tr>
+                        <tr>
+                            <td>50</td>
+                            <td>5XL</td>
+                            <td>116</td>
+                            <td>103</td>
+                            <td>119</td>
+                        </tr>
+                        <tr>
+                            <td>52</td>
+                            <td>6XL</td>
+                            <td>122</td>
+                            <td>109.5</td>
+                            <td>124</td>
+                        </tr>
+                        <tr>
+                            <td>54</td>
+                            <td>7XL</td>
+                            <td>128</td>
+                            <td>116</td>
+                            <td>130</td>
+                        </tr>
+                        <tr>
+                            <td>56</td>
+                            <td>8XL</td>
+                            <td>134</td>
+                            <td>122.5</td>
+                            <td>136</td>
+                        </tr>
+                        <tr>
+                            <td>58</td>
+                            <td>9XL</td>
+                            <td>140</td>
+                            <td>129</td>
+                            <td>142</td>
+                        </tr>
+                        <tr>
+                            <td>60</td>
+                            <td>10XL</td>
+                            <td>146</td>
+                            <td>135.5</td>
+                            <td>148</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Anmeldelser -->
+            <section>
+                <h3>Anmeldelser</h3>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <article>
+                    <p>Mari Coon</p>
+                    <p>2024-10-02</p> <!-- Egen tag for tid? -->
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <p>Duis risus sapien, sagittis non sapien condimentum, lacinia fermentum neque. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                </article>
+            </section>
         </section>
     </main>
     <aside>
-        <!-- Relaterte/Lignende produkter-->
-         <!-- Produktkort -->
-        <!-- Link - "Se fler lignende produkter" (Inkluder pilikon for linken) -->
+        <header>
+            <!-- Relaterte/Lignende produkter-->
+            <h3>Lignende produkter</h3>
+            <a href="#">Se flere lignende produkter<i class="fa-solid fa-arrow-right"></i></a>
+        </header>
+        <!-- Produktkort -->
+        <article>
+            <!-- Bilde -->
+            <picture>
+                <!-- <source> for mediaqueries må huskes!-->
+                <img src="https://picsum.photos/id/1078/200/300" alt="Lignende produkter"> <!-- Finn bedre alt, evt størrelse også. -->
+            </picture>
+            <i class="fa-regular fa-heart"></i>
+
+            <!-- Produktnavn -->
+            <a href="product.html">Product name</a>     <!-- Riktig lenking? -->
+
+            <!-- Pris -->                                   <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
+            <p>Kr 1900,-</p>
+
+            <!-- Stjerner -->                               <!-- !! microdata !! -->
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+
+            <!-- Liten tekst om antall anmeldelser -->      <!-- !! microdata !! -->
+            <p>842 Reviews</p>
+        </article>
     </aside>
     <!--    GLOBAL FOOTER   -->
 </body> 
