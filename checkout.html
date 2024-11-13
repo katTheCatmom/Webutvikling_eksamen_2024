@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nb">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="ikoner/css/fontawesome.css" rel="stylesheet"> 
+    <link href="ikoner/css/brands.css" rel="stylesheet">
+    <link href="ikoner/css/solid.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <title>handlekurv</title>
 </head>
 <body>
@@ -24,60 +28,101 @@
                     - ikoner (se bilder)
         -->
 
-                <!-- SKJEMA - SE LAB3   -->
+    
         <!-- Seksjon 2 - personopplysninger -->
-        <section> <!-- https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_submit -->
+        <section>
             <h2>2. DINE OPPLYSNINGER</h2>
-            <form>  <!-- Method="" -->
+            
+            <form method="get">  <!-- Method -> Referanse i notepad --> <!-- Legge inn action="" ?-->
                 <h3>Leveringsadresse</h3>
-                <label>
-                    Fornavn:
-                    <input type="text" name="fornavn" placeholder="Nora*" maxlength="45" pattern="[A-Za-zæøåÆØÅ ]{2,}" required> <!-- {} min. 2 tegn-->
+                
+                <label for="fornavn">
+                    Fornavn
+                    <input type="text" name="fnavn"  id="fornavn" placeholder="Nora*" maxlength="45" pattern="[A-Za-zæøåÆØÅ ]{2,}" required> <!-- {} min. 2 tegn-->
                 </label>
-                <label>
-                    Etternavn:
-                    <input type="text" name="etternavn" placeholder="Nordmann*" maxlength="45" pattern="[A-Za-zæøåÆØÅ ]{2,}" required>
+
+                <label for="etternavn">
+                    Etternavn
+                    <input type="text" name="enavn" id="etternavn" placeholder="Nordmann*" maxlength="45" pattern="[A-Za-zæøåÆØÅ ]{2,}" required>
                 </label>
-                <label>
-                    Gateadresse:
+
+                <label for="gateadresse">
+                    Gateadresse
+                    <input type="text" name="adresse" id="gateadresse" placeholder="BRA veien 4*" required> <!-- Mer spesifikt pattern? -->
                 </label>
-                <label>
-                    Postnummer:
+
+                <label for="postnummer">
+                    Postnummer
+                    <input type="number" name="adresse" id="postnummer" placeholder="1752*" maxlength="4" pattern="[0-9]{4}" required>
                 </label>
-                <label>
-                    Poststed:
+
+                <label for="poststed">
+                    Poststed
+                    <input type="text" name="adresse" id="poststed" placeholder="Halden*" pattern="[A-Za-zæøåÆØÅ ]{2,}" required>
                 </label>
-                <button>Lagre</button>
-                <button>Avbryt</button>
+
+                <input type="submit" value="Lagre">
+                <input type="submit" value="Avbryt">
             </form>
+
+            <form method="get">
+                <h3>Kontaktinformasjon</h3>
+
+                <label for="epost">
+                    E-post
+                    <input type="email" name="email" id="epost" placeholder="Noranordmann@hiof.no*" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required>
+                </label>
+
+                <label for="telefonnr">
+                    Telefon
+                    <input type="tel" name="telefonnummer" id="telefonnr" placeholder="+4749***018" pattern="[0-9]{8,12}">
+                </label>
+            </form>
+
         </section>
-        <!-- - Skjema
-                - Fornavn
-                - Etternavn
-                - Gateadresse
-                - Postnummer
-                - Poststed
-                - Lagre-knapp
-                - Avbryt-knapp
-                - nytt område
-                    - Epost
-                    - Telefonnr        
-        -->
 
         <!-- Seksjon 3 - Levering -->
-        <!-- - skjema
-                - Ekspress hjem
-                - Ekspress utleveringssted
-                - Standard hjem
-             - For alle:
-                - Husk riktig input, label for valg
-                - Leveringstid
-                - Tekstlig info
-                - pris
-                - ikon for levering
-        -->
+        <section>
+            <h2>3. LEVERING</h2>
+            <form>
+                <h3>LEVERINGSVALG</h3>
+                <ul>
+                    <li>
+                        <label for="ekspressHjem">Ekspress Hjemlevering</label>
+                        <input type="radio" name="leveringsvalg" id="ekspressHjem">
+                        <p>59 kr<i class="fa-solid fa-truck-fast"></i></p>
+                        <p>3-4 Virkedager</p>
+                        <p>Bestill hvevrdag før 08:00* for levering neste virkedag. Leveres hjem til deg før frokost
+                            mandag til lørdag. *For levering til postnummer 4000-7999 er leveringstiden 2 virkedager,
+                            for postnummer 8000-9999 er leveringstiden 3 virkedager.
+                        </p>
+                    </li>
+
+                    <li>
+                        <label for="ekspressUtlevering">Ekspress Pakke til utleveringssted</label>
+                        <input type="radio" name="leveringsvalg" id="ekspressUtlevering">
+                        <p>59 kr<i class="fa-brands fa-dhl"></i></p>
+                        <p>1-3 Virkedager</p>
+                    </li>
+
+                    <li>
+                        <label for="standardHjem">Standard Hjemlevering</label>
+                        <input type="radio" name="leveringsvalg" id="standardHjem">
+                        <p>Gratis<i class="fa-solid fa-box"></i></p>
+                        <p>5-8 Virkedager</p>
+                        <p>Leveres hjem til deg før frokost mandag til lørdag innen 4-7 hverdager.</p>
+                    </li>
+                </ul>
+            </form>
+        </section>
 
         <!-- Seksjon 4 - Kortinformasjon + samtykke -->
+        <section>
+            <h2>4. Betaling</h2>
+            <form>
+                
+            </form>
+        </section>
          <!-- - Skjema
                 - Kortnummer
                 - Utløpsdato
