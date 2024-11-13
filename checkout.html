@@ -11,6 +11,9 @@
         <h1>Kasse</h1>
         <a href="#">(pilikon) fortsett å handle</a> <!-- Finn riktig lenking -->
         <!-- Seksjon 1 - Shoppingbag -->
+        <section>
+            <h2>1. SHOPPINGBAGEN DIN</h2>
+        </section>
         <!-- - min. 2 produktkort
                     - bilde
                     - produktnavn
@@ -21,7 +24,33 @@
                     - ikoner (se bilder)
         -->
 
+                <!-- SKJEMA - SE LAB3   -->
         <!-- Seksjon 2 - personopplysninger -->
+        <section> <!-- https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_submit -->
+            <h2>2. DINE OPPLYSNINGER</h2>
+            <form>  <!-- Method="" -->
+                <h3>Leveringsadresse</h3>
+                <label>
+                    Fornavn:
+                    <input type="text" name="fornavn" placeholder="Nora*" maxlength="45" pattern="[A-Za-zæøåÆØÅ ]{2,}" required> <!-- {} min. 2 tegn-->
+                </label>
+                <label>
+                    Etternavn:
+                    <input type="text" name="etternavn" placeholder="Nordmann*" maxlength="45" pattern="[A-Za-zæøåÆØÅ ]{2,}" required>
+                </label>
+                <label>
+                    Gateadresse:
+                </label>
+                <label>
+                    Postnummer:
+                </label>
+                <label>
+                    Poststed:
+                </label>
+                <button>Lagre</button>
+                <button>Avbryt</button>
+            </form>
+        </section>
         <!-- - Skjema
                 - Fornavn
                 - Etternavn
