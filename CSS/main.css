@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#global-header nav ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  width: 100%;
+  padding: 0;
+}
+#global-header nav ul li {
+  padding: 0.75rem;
+}
+#global-header nav ul .logo a {
+  padding: 0.75rem;
+}/*# sourceMappingURL=main.css.map */
