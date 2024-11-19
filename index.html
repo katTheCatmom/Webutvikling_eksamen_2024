@@ -11,11 +11,12 @@
 </head>
 <body>
     <header id="global-header">
-        <form>
-            <label for="search">Søk</label>
-            <input type="search" placeholder="søk her" id="search">
-            <input type="submit" value="søk">
-            <i class="fa-solid fa-magnifying-glass"></i>
+        <form id="toppen"> <!-- Method? -->
+            <!-- Lurt med label? (mtp høytopplesning)-->
+            <label>
+                <input type="search" placeholder="søk her" id="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </label>
         </form>
         <nav>
             <ul>
@@ -23,14 +24,14 @@
                 <li><a href="#populaereProdukter">Produkter</a></li>
                 <li class="logo">
                     <a href="index.html">
-                        <img src="bilder/logo.png" width="100px" alt="Nettsidens logo"> <!-- Bedre alt? -->
+                        <img src="bilder/logo1c1c1c.png" width="100" alt="Nettsidens logo"> <!-- Bedre alt? -->
                     </a>
                 </li>
                 <li><a href="#populaereKategorier">Kategorier</a></li>
                 <li><a href="#kontaktOss">Kontakt oss</a></li>
             </ul>
         </nav>
-        <ul>
+        <ul id="header-ikonmeny">
             <li><i class="fa-regular fa-user"></i></li> <!-- User icon-->
             <li><i class="fa-regular fa-heart"></i></li> <!-- Heart icon -->
             <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li> <!-- Shopping cart-->
@@ -146,23 +147,25 @@
         </section>
     </main>
     <aside></aside>
-    <footer>   <!-- Hva slags inndelinger er lov i footer??? Finner jo ingenting her (hverken forelesninger eller nett(bortsett fra <div> og mye </br>....)).-->
-        <section>
-            <h3>LOGO</h3>   <!-- FIKS LOGO -->
+    <footer id="global-footer">   
+        <section id="footer-ingress">
+            <h3><img src="bilder/logo1c1c1c.png" alt="Bedriftens logo" width="65"></h3>   <!-- bedre alt -->
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis. 
             </p>
         </section>
-        <section id="kontaktOss">
-            <h4>KONTAKT</h4>
-            <p>Adresse: B R A Veien 4, 1757 Halden</p> <!-- Er det en egen href for adresse?-->
-            <p>Telefon: <a href="tel:+469608000">(+47) 69 60 80 00</a></p>
-            <p>E-post: <a href="mailto:halden@hiof.no">halden@hiof.no</a></p>
-            <p>Åpningstider: Stenger 15:00</p>
+        <section id="footer-kontakt">
+            <h4 id="kontaktOss">KONTAKT</h4>
+            <ul>
+                <li><i class="fa-solid fa-location-dot"></i>Adresse: B R A Veien 4, 1757 Halden</li> <!-- Er det en egen href for adresse?-->
+                <li><i class="fa-solid fa-phone"></i>Telefon: <a href="tel:+469608000">(+47) 69 60 80 00</a></li>
+                <li><i class="fa-solid fa-envelope"></i>E-post: <a href="mailto:halden@hiof.no">halden@hiof.no</a></li>
+                <li><i class="fa-solid fa-clock"></i>Åpningstider: Stenger 15:00</p></li>
+            </ul>
         </section>
-        <section>
+        <section id="footer-snarveier">
             <nav>
-                <h4>Snarveier</h4>
+                <h4>SNARVEIER</h4>
                 <ul>
                     <li><a href="#populaereProdukter">Produkter</a></li>
                     <li><a href="#populaereKategorier">Kategorier</a></li>
@@ -170,12 +173,16 @@
                 </ul>
             </nav>
         </section>
-        <section>
-            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://no.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://no.pinterest.com/"><i class="fa-brands fa-pinterest"></i></a>
+        <section id="footer-sosialemedier">
+            <h4>SOSIALE MEDIER</h4>
+            <ul>
+                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://no.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://no.pinterest.com/"><i class="fa-brands fa-pinterest"></i></a>
+            </ul>
         </section>
+        <a href="#toppen" id="hopp-til-toppen">Hopp til toppen</a>
     </footer>
 </body>
 </html>
