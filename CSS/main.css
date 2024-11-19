@@ -1,7 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-.footer-heading, #global-footer h4 {
+.slim-heading, #global-footer h4 {
   font-family: "Roboto", sans-serif;
   font-weight: 450;
+  font-style: normal;
+}
+
+.bold-font, #global-footer #footer-kontakt span {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -24,7 +30,7 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.75rem;
   justify-content: center;
   align-items: center;
   color: #1c1c1c;
@@ -98,10 +104,22 @@ body {
   justify-content: center;
   width: 100%;
   padding: 0;
+  margin: 0;
   list-style: none;
 }
 #global-header #header-ikonmeny i {
   color: #1c1c1c;
+}
+
+#sliderForside {
+  padding: 1rem;
+}
+#sliderForside img {
+  width: 100%;
+  max-width: 100%;
+  height: 85vh;
+  padding: 0rem;
+  border-radius: 30px;
 }
 
 #global-footer {
@@ -132,15 +150,33 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  gap: 0.5rem;
+  gap: 1rem;
   width: 65%;
+}
+#global-footer #footer-kontakt ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+}
+#global-footer #footer-kontakt li {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
 }
 #global-footer #footer-snarveier {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  gap: 0;
-  width: 30%;
+  gap: 1rem;
+  width: 100%;
+}
+#global-footer #footer-snarveier ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
 }
 #global-footer #footer-sosialemedier {
   display: flex;

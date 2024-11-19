@@ -21,7 +21,7 @@
         <nav>
             <ul>
                 <li><a href="index.html">Hjem</a></li>
-                <li><a href="#populaereProdukter">Produkter</a></li>
+                <li><a href="index.html#populaereProdukter">Produkter</a></li>
                 <li class="logo">
                     <a href="index.html">
                         <img src="bilder/logo1c1c1c.png" width="100" alt="Nettsidens logo"> <!-- Bedre alt? -->
@@ -39,9 +39,9 @@
     </header>
     <main>
                     <!-- Slider -->
-        <section>
+        <section id="sliderForside">
             <!-- Kanskje mest hensiktsmessig å benytte <picture>. Husk Media queries-->
-            <img src="https://picsum.photos/id/267/200/300" alt="slider"> <!-- !! bedre alt !! -->
+            <img src="https://picsum.photos/id/267/450/750" alt="slider"> <!-- !! bedre alt !! -->
         </section>
 
                     <!-- Mest populære produkter -->
@@ -149,7 +149,7 @@
     <aside></aside>
     <footer id="global-footer">   
         <section id="footer-ingress">
-            <h4><img src="bilder/logo1c1c1c.png" alt="Bedriftens logo" width="65"></h4>   <!-- bedre alt -->
+            <img src="bilder/logo1c1c1c.png" alt="Bedriftens logo" width="65">   <!-- bedre alt -->
             <p>
                 At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis. 
             </p>
@@ -157,18 +157,18 @@
         <section id="footer-kontakt">
             <h4 id="kontaktOss">KONTAKT</h4>
             <ul>
-                <li><i class="fa-solid fa-location-dot"></i>Adresse: B R A Veien 4, 1757 Halden</li> <!-- Er det en egen href for adresse?-->
-                <li><i class="fa-solid fa-phone"></i>Telefon: <a href="tel:+469608000">(+47) 69 60 80 00</a></li>
-                <li><i class="fa-solid fa-envelope"></i>E-post: <a href="mailto:halden@hiof.no">halden@hiof.no</a></li>
-                <li><i class="fa-solid fa-clock"></i>Åpningstider: Stenger 15:00</p></li>
+                <li><i class="fa-solid fa-location-dot"></i><span>Adresse:</span>B R A Veien 4, 1757 Halden</li> <!-- Er det en egen href for adresse?-->
+                <li><i class="fa-solid fa-phone"></i><span>Telefon:</span><a href="tel:+469608000">(+47) 69 60 80 00</a></li>
+                <li><i class="fa-solid fa-envelope"></i><span>E-post:</span> <a href="mailto:halden@hiof.no">halden@hiof.no</a></li>
+                <li><i class="fa-solid fa-clock"></i><span>Åpningstider:</span> Stenger 15:00</p></li>
             </ul>
         </section>
-        <section id="footer-snarveier">
-            <nav>
+        <section>
+            <nav id="footer-snarveier">
                 <h4>SNARVEIER</h4>
                 <ul>
-                    <li><a href="#populaereProdukter">Produkter</a></li>
-                    <li><a href="#populaereKategorier">Kategorier</a></li>
+                    <li><a href="index.html#populaereProdukter">Produkter</a></li>
+                    <li><a href="index.html#populaereKategorier">Kategorier</a></li>
                     <li><a href="#kontaktOss">Kontakt oss</a></li>
                 </ul>
             </nav>
@@ -176,10 +176,10 @@
         <section id="footer-sosialemedier">
             <h4>SOSIALE MEDIER</h4>
             <ul>
-                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://no.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://no.pinterest.com/"><i class="fa-brands fa-pinterest"></i></a>
+                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-lg"></i></a>
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook fa-lg"></i></a>
+                <a href="https://no.linkedin.com/"><i class="fa-brands fa-linkedin fa-lg"></i></a>
+                <a href="https://no.pinterest.com/"><i class="fa-brands fa-pinterest fa-lg"></i></a>
             </ul>
         </section>
         <a href="#toppen" id="hopp-til-toppen">Hopp til toppen</a>

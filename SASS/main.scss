@@ -13,9 +13,11 @@ body {
     font-family: $mainFont;
 }
 
+
+
 // GLOBAL HEADER //
 #global-header {
-    @include flexbox(row, wrap, 1rem);
+    @include flexbox(row, wrap, 0.75rem);
     justify-content: center;
     align-items: center;
     color: $darkgrey;
@@ -68,19 +70,33 @@ body {
         }
     }
 
-
     #header-ikonmeny {
         @include flexbox(row, wrap, 1.5rem);
         justify-content: center;
         width: 100%;
         padding: 0;
+        margin: 0;
         list-style: none;
 
         i {
-            color: $darkgrey
+            color: $darkgrey; 
         }     
     }
 }
+
+
+
+// FORSIDE //
+#sliderForside {
+    padding: 1rem;
+    img {
+        @include box(100%, 85vh, 0rem, 30px);
+    }
+}
+
+
+
+
 
 
 // GLOBAL FOOTER //
@@ -94,7 +110,7 @@ body {
     }
 
     h4 {
-        @extend .footer-heading;
+        @extend .slim-heading;
         margin: 0;
     }
 
@@ -111,13 +127,30 @@ body {
     }
 
     #footer-kontakt {
-        @include flexbox(column, nowrap, 0.5rem);
+        @include flexbox(column, nowrap, 1rem);
         width: 65%;
+
+        ul {
+            @include flexbox(column, nowrap, 0.5rem);
+        }
+
+        li {
+           @include flexbox(row, nowrap, 0.5rem);
+        }
+
+        span {
+            @extend .bold-font;
+        }
     }
 
     #footer-snarveier {
-        @include flexbox(column, nowrap, 0);
-        width: 30%;
+        @include flexbox(column, nowrap, 1rem);
+        width: 100%;
+        
+        ul {
+            @include flexbox(column, nowrap, 0.5rem);
+        }
+
     }
 
     #footer-sosialemedier {
