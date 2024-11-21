@@ -111,8 +111,39 @@ body {
   color: #1c1c1c;
 }
 
+#grid-container-forside {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto, auto, auto;
+}
+#grid-container-forside header {
+  grid-column: "1 / 2";
+  grid-row: "1 / 2";
+}
+#grid-container-forside main {
+  grid-column: "1 / 2";
+  grid-row: "2 / 3";
+}
+#grid-container-forside footer {
+  grid-column: "1 / 2";
+  grid-row: "3 / 4";
+}
+
 #sliderForside {
-  padding: 1rem;
+  padding: 0.5rem;
+  position: relative;
+}
+#sliderForside header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 33%;
 }
 #sliderForside img {
   width: 100%;
@@ -120,6 +151,55 @@ body {
   height: 85vh;
   padding: 0rem;
   border-radius: 30px;
+}
+
+#produkter {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+#produkter #populaereProdukter {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+}
+#produkter #populaereProdukter h2 {
+  text-align: center;
+  font-size: 300%;
+}
+#produkter #populaereProdukter ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0;
+  list-style: none;
+}
+#produkter #populaereProdukter ul li {
+  width: 8rem;
+}
+#produkter #populaereProdukter .filter-btn {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  width: 8rem;
+  border: 1.5px solid #b5b5b5;
+  border-radius: 37px;
+  text-align: center;
+  text-decoration: none;
+  color: #1c1c1c;
+}
+#produkter #populaereProdukter #active-filter-btn {
+  background-color: #292929;
+  color: #ffffff;
 }
 
 #global-footer {

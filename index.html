@@ -10,179 +10,187 @@
     <title>Forside</title>
 </head>
 <body>
-    <header id="global-header">
-        <form id="toppen"> <!-- Method? -->
-            <!-- Lurt med label? (mtp høytopplesning)-->
-            <label>
-                <input type="search" placeholder="søk her" id="search">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </label>
-        </form>
-        <nav>
-            <ul>
-                <li><a href="index.html">Hjem</a></li>
-                <li><a href="index.html#populaereProdukter">Produkter</a></li>
-                <li class="logo">
-                    <a href="index.html">
-                        <img src="bilder/logo1c1c1c.png" width="100" alt="Nettsidens logo"> <!-- Bedre alt? -->
-                    </a>
-                </li>
-                <li><a href="#populaereKategorier">Kategorier</a></li>
-                <li><a href="#kontaktOss">Kontakt oss</a></li>
-            </ul>
-        </nav>
-        <ul id="header-ikonmeny">
-            <li><i class="fa-regular fa-user"></i></li> <!-- User icon-->
-            <li><i class="fa-regular fa-heart"></i></li> <!-- Heart icon -->
-            <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li> <!-- Shopping cart-->
-        </ul>
-    </header>
-    <main>
-                    <!-- Slider -->
-        <section id="sliderForside">
-            <!-- Kanskje mest hensiktsmessig å benytte <picture>. Husk Media queries-->
-            <img src="https://picsum.photos/id/267/450/750" alt="slider"> <!-- !! bedre alt !! -->
-        </section>
-
-                    <!-- Mest populære produkter -->
-        <section>
-            <article id="populaereProdukter">
-                <h2>Våre mest populære produkter</h2>
-                <p>Oppdag det beste av det beste</p>
-                <!-- !!! Statiske knapper for filtrering !!!-->
+    <div id="grid-container-forside">
+        <header id="global-header">
+            <form id="toppen"> <!-- Method? -->
+                <!-- Lurt med label? (mtp høytopplesning)-->
+                <label>
+                    <input type="search" placeholder="søk her" id="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </label>
+            </form>
+            <nav>
                 <ul>
-                    <li> <!-- Velger å bruke <a> her, fordi de skal være statiske. De linker til produkter. Gir også den 'hånda' når man :hover-->
-                        <a href="#populaereProdukter">New Product</a>
+                    <li><a href="index.html">Hjem</a></li>
+                    <li><a href="index.html#populaereProdukter">Produkter</a></li>
+                    <li class="logo">
+                        <a href="index.html">
+                            <img src="bilder/logo1c1c1c.png" width="100" alt="Nettsidens logo"> <!-- Bedre alt? -->
+                        </a>
                     </li>
-                    <li>
-                        <a href="#populaereProdukter">Special Price</a>
-                    </li>
-                    <li>
-                        <a href="populaereProdukter">Best Sellers</a>
-                    </li>
+                    <li><a href="#populaereKategorier">Kategorier</a></li>
+                    <li><a href="#kontaktOss">Kontakt oss</a></li>
                 </ul>
-            </article>
-            
-            <!-- Produktkort: -->
-             <!-- section i section: https://stackoverflow.com/questions/9916354/is-it-valid-to-have-a-section-tag-inside-another-section-tag -->
+            </nav>
+            <ul id="header-ikonmeny">
+                <li><i class="fa-regular fa-user"></i></li> <!-- User icon-->
+                <li><i class="fa-regular fa-heart"></i></li> <!-- Heart icon -->
+                <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li> <!-- Shopping cart-->
+            </ul>
+        </header>
+        <main>
+                        <!-- Slider -->
+            <section id="sliderForside">
+                <header>
+                    <h2>Et harum quidem rerum facilis est et expedita distinctio.</h2>
+                    <p>Nam liberto tempore, cum soluta nobis est eligendi optio cumque
+                        nihil impedit quo minus id quod maxime placeat facere pssoimus
+                    </p>
+                    <a href="index.html#populaereProdukter" class="btn">Les mer</a>
+                </header>
+                <!-- Kanskje mest hensiktsmessig å benytte <picture>. Husk Media queries-->
+                <img src="https://picsum.photos/id/267/450/750" alt="slider"> <!-- !! bedre alt !! -->
+            </section>
+
+                        <!-- Mest populære produkter -->
+            <section id="produkter">
+                <article id="populaereProdukter">
+                    <h2>Våre mest populære produkter</h2>
+                    <p>Oppdag det beste av det beste</p>
+                    <!-- !!! Statiske knapper for filtrering !!!-->
+                    <ul>
+                        <li> <!-- Velger å bruke <a> her, fordi de skal være statiske. De linker til produkter. Gir også den 'hånda' når man :hover-->
+                            <a href="#populaereProdukter" id="active-filter-btn" class="filter-btn">New Product</a>
+                        </li>
+                        <li>
+                            <a href="#populaereProdukter" class="filter-btn">Special Price</a>
+                        </li>
+                        <li>
+                            <a href="#populaereProdukter" class="filter-btn">Best Sellers</a>
+                        </li>
+                    </ul>
+                </article>
+                
+                <!-- Produktkort: -->
+                <!-- section i section: https://stackoverflow.com/questions/9916354/is-it-valid-to-have-a-section-tag-inside-another-section-tag -->
+                <section>
+                    <article>
+                        <!-- Bilde -->
+                        <picture>
+                            <!-- <source> for mediaqueries må huskes!-->
+                            <img src="https://picsum.photos/id/177/200/300" alt="produktkort"> <!-- Finn bedre alt, evt størrelse også. -->
+                        </picture>
+                        <i class="fa-regular fa-heart"></i>
+                        <!-- Produktnavn -->
+                        <a href="product.html">Product name</a>
+
+                        <!-- Pris -->                                   <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
+                        <p>Kr 1900,-</p>
+
+                        <!-- Stjerner -->                               <!-- !! microdata !! -->
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+
+                        <!-- Liten tekst om antall anmeldelser -->      <!-- !! microdata !! -->
+                        <p>842 Reviews</p>
+                    </article>
+                </section>
+            </section>
+
+                        <!--Mest populære kategorier -->
             <section>
+                <article id="populaereKategorier">
+                    <h2>Våre mest populære kategorier</h2>
+                    <p>Oppdag det beste av det beste</p>
+                </article>
+                <section>
+                    <!-- Her skal kategorikortene komme! -->
+                    <article>
+                        <!-- Ha de begge inni en <a> tag på noe vis. Også z(?)-index for at bildet havner i bakgrunn, for så å sentrere "kategori 1" midten oppå-->
+                        <a href="product.html">
+                            <img src="https://picsum.photos/id/21/200/300" alt="kategori 1">
+                            <h3>Kategori 1</h3>
+                        </a>
+                    </article>
+                    <article>
+                        <img src="https://picsum.photos/id/248/200/300" alt="kategori 2">
+                        <h3>Kategori 2</h3>
+                    </article>
+                    <article>
+                        <img src="https://picsum.photos/id/26/200/300" alt="kategori 3">
+                        <h3>Kategori 3</h3>
+                    </article>
+                    <article>
+                        <img src="https://picsum.photos/id/157/200/300" alt="kategori 4">
+                        <h3>Kategori 4</h3>
+                    </article>
+                    <article>
+                        <img src="https://picsum.photos/id/96/200/300" alt="Kategori 5">
+                        <h3>Kategori 5</h3>
+                    </article>
+                </section>
+            </section>
+
+                        <!-- Anmeldelser -->
+            <section>
+                <!-- overskrift -->
+                <h2>Anmeldelser</h2>
                 <article>
-                    <!-- Bilde -->
-                    <picture>
-                        <!-- <source> for mediaqueries må huskes!-->
-                        <img src="https://picsum.photos/id/177/200/300" alt="produktkort"> <!-- Finn bedre alt, evt størrelse også. -->
-                    </picture>
-                    <i class="fa-regular fa-heart"></i>
-                    <!-- Produktnavn -->
-                    <a href="product.html">Product name</a>
-
-                    <!-- Pris -->                                   <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
-                    <p>Kr 1900,-</p>
-
-                    <!-- Stjerner -->                               <!-- !! microdata !! -->
-                    <i class="fa-solid fa-star"></i>
+                    <!-- bilde -->
+                    <img src="https://picsum.photos/id/40/200/300" alt="Anmelder">
+                    <!-- Navn -->
+                    <p>Mari Coon</p>
+                    <!-- stjerner -->
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-regular fa-star"></i>
-
-                    <!-- Liten tekst om antall anmeldelser -->      <!-- !! microdata !! -->
-                    <p>842 Reviews</p>
+                    <i class="fa-regular fa-star"></i>
+                    <!-- Anmeldertekst -->
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce malesuada, erat et feugiat varius, nibh nulla venenatis quam, id ultricies quam libero quis ex. Nulla posuere arcu nec nibh dictum viverra. Quisque ligula lorem, fringilla in est a, commodo sodales ipsum. Maecenas et efficitur lorem.</p>
                 </article>
             </section>
-        </section>
-
-                    <!--Mest populære kategorier -->
-        <section>
-            <article id="populaereKategorier">
-                <h2>Våre mest populære kategorier</h2>
-                <p>Oppdag det beste av det beste</p>
-            </article>
-            <section>
-                <!-- Her skal kategorikortene komme! -->
-                <article>
-                    <!-- Ha de begge inni en <a> tag på noe vis. Også z(?)-index for at bildet havner i bakgrunn, for så å sentrere "kategori 1" midten oppå-->
-                    <a href="product.html">
-                        <img src="https://picsum.photos/id/21/200/300" alt="kategori 1">
-                        <h3>Kategori 1</h3>
-                    </a>
-                </article>
-                <article>
-                    <img src="https://picsum.photos/id/248/200/300" alt="kategori 2">
-                    <h3>Kategori 2</h3>
-                </article>
-                <article>
-                    <img src="https://picsum.photos/id/26/200/300" alt="kategori 3">
-                    <h3>Kategori 3</h3>
-                </article>
-                <article>
-                    <img src="https://picsum.photos/id/157/200/300" alt="kategori 4">
-                    <h3>Kategori 4</h3>
-                </article>
-                <article>
-                    <img src="https://picsum.photos/id/96/200/300" alt="Kategori 5">
-                    <h3>Kategori 5</h3>
-                </article>
+        </main>
+        <footer id="global-footer">   
+            <section id="footer-ingress">
+                <img src="bilder/logo1c1c1c.png" alt="Bedriftens logo" width="65">   <!-- bedre alt -->
+                <p>
+                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis. 
+                </p>
             </section>
-        </section>
-
-                    <!-- Anmeldelser -->
-        <section>
-            <!-- overskrift -->
-            <h2>Anmeldelser</h2>
-            <article>
-                <!-- bilde -->
-                <img src="https://picsum.photos/id/40/200/300" alt="Anmelder">
-                <!-- Navn -->
-                <p>Mari Coon</p>
-                <!-- stjerner -->
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <i class="fa-regular fa-star"></i>
-                <!-- Anmeldertekst -->
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce malesuada, erat et feugiat varius, nibh nulla venenatis quam, id ultricies quam libero quis ex. Nulla posuere arcu nec nibh dictum viverra. Quisque ligula lorem, fringilla in est a, commodo sodales ipsum. Maecenas et efficitur lorem.</p>
-            </article>
-        </section>
-    </main>
-    <aside></aside>
-    <footer id="global-footer">   
-        <section id="footer-ingress">
-            <img src="bilder/logo1c1c1c.png" alt="Bedriftens logo" width="65">   <!-- bedre alt -->
-            <p>
-                At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis. 
-            </p>
-        </section>
-        <section id="footer-kontakt">
-            <h4 id="kontaktOss">KONTAKT</h4>
-            <ul>
-                <li><i class="fa-solid fa-location-dot"></i><span>Adresse:</span>B R A Veien 4, 1757 Halden</li> <!-- Er det en egen href for adresse?-->
-                <li><i class="fa-solid fa-phone"></i><span>Telefon:</span><a href="tel:+469608000">(+47) 69 60 80 00</a></li>
-                <li><i class="fa-solid fa-envelope"></i><span>E-post:</span> <a href="mailto:halden@hiof.no">halden@hiof.no</a></li>
-                <li><i class="fa-solid fa-clock"></i><span>Åpningstider:</span> Stenger 15:00</p></li>
-            </ul>
-        </section>
-        <section>
-            <nav id="footer-snarveier">
-                <h4>SNARVEIER</h4>
+            <section id="footer-kontakt">
+                <h4 id="kontaktOss">KONTAKT</h4>
                 <ul>
-                    <li><a href="index.html#populaereProdukter">Produkter</a></li>
-                    <li><a href="index.html#populaereKategorier">Kategorier</a></li>
-                    <li><a href="#kontaktOss">Kontakt oss</a></li>
+                    <li><i class="fa-solid fa-location-dot"></i><span>Adresse:</span>B R A Veien 4, 1757 Halden</li> <!-- Er det en egen href for adresse?-->
+                    <li><i class="fa-solid fa-phone"></i><span>Telefon:</span><a href="tel:+469608000">(+47) 69 60 80 00</a></li>
+                    <li><i class="fa-solid fa-envelope"></i><span>E-post:</span> <a href="mailto:halden@hiof.no">halden@hiof.no</a></li>
+                    <li><i class="fa-solid fa-clock"></i><span>Åpningstider:</span> Stenger 15:00</p></li>
                 </ul>
-            </nav>
-        </section>
-        <section id="footer-sosialemedier">
-            <h4>SOSIALE MEDIER</h4>
-            <ul>
-                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-lg"></i></a>
-                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook fa-lg"></i></a>
-                <a href="https://no.linkedin.com/"><i class="fa-brands fa-linkedin fa-lg"></i></a>
-                <a href="https://no.pinterest.com/"><i class="fa-brands fa-pinterest fa-lg"></i></a>
-            </ul>
-        </section>
-        <a href="#toppen" id="hopp-til-toppen">Hopp til toppen</a>
-    </footer>
+            </section>
+            <section>
+                <nav id="footer-snarveier">
+                    <h4>SNARVEIER</h4>
+                    <ul>
+                        <li><a href="index.html#populaereProdukter">Produkter</a></li>
+                        <li><a href="index.html#populaereKategorier">Kategorier</a></li>
+                        <li><a href="#kontaktOss">Kontakt oss</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <section id="footer-sosialemedier">
+                <h4>SOSIALE MEDIER</h4>
+                <ul>
+                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-lg"></i></a>
+                    <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook fa-lg"></i></a>
+                    <a href="https://no.linkedin.com/"><i class="fa-brands fa-linkedin fa-lg"></i></a>
+                    <a href="https://no.pinterest.com/"><i class="fa-brands fa-pinterest fa-lg"></i></a>
+                </ul>
+            </section>
+            <a href="#toppen" id="hopp-til-toppen">Hopp til toppen</a>
+        </footer>
+    </div>
 </body>
 </html>
