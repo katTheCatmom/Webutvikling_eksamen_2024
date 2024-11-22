@@ -120,6 +120,7 @@ body {
         align-items: flex-start;
         width: 33%;
     }
+
     img {
         @include box(100%, 85vh, 0rem, 30px);
     }
@@ -127,10 +128,6 @@ body {
 
 
 #produkter {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1.5rem;
 
     #populaereProdukter {
         display: flex;
@@ -142,11 +139,7 @@ body {
         h2 {
             text-align: center;
             font-size: 300%;
-           
-        }
-
-        p {
-           
+            margin: 1rem;
         }
 
         ul {
@@ -157,6 +150,7 @@ body {
             width: fit-content;
             padding: 0;
             list-style: none;
+            justify-content: center;
 
             li {
                 width: 8rem;
@@ -168,8 +162,8 @@ body {
             flex-direction: row;
             flex-wrap: wrap;
             padding: 1rem;
-            padding-right: 2rem;
-            padding-left: 2rem;
+            padding-right: 2rem;    //For at teksten skal legge seg over to linjer
+            padding-left: 2rem;     //For at teksten skal legge seg over to linjer
             width: 8rem;
             border: 1.5px solid #b5b5b5;
             border-radius: 37px;
@@ -184,6 +178,80 @@ body {
         }
     }
 
+    // PRODUKTKORT 
+    .product-card {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 100%;
+        padding: 0.5rem;
+        position: relative;
+        
+        border: 2px solid #b5b5b5;
+        border-radius: 30px;
+        
+        picture {
+            width: 100%;
+
+            img {
+                width: 100%;
+                max-width: 100%;
+                height: 100%;
+                
+                border-radius: 30px;
+            }
+        }
+        
+        .product-heart {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            
+            width: 3rem;
+            height: 3rem;
+            
+            background-color: #b5b5b5;//rgba(71, 71, 71, 0.5);
+            backdrop-filter: blur(20px);
+            border-radius: 50px;
+        }
+       
+        a { 
+            text-decoration: none;
+            color: #1c1c1c;
+            font-weight: 750;
+            font-family: "roboto";
+            font-size: larger;
+        }
+
+        p {
+            margin: 0;
+            height: fit-content; 
+        }
+
+        .reviews {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: 1rem;
+            
+            width: 100%;
+            padding: 0;
+            
+            list-style: none;
+
+            p {
+                height: fit-content;
+                margin: 0;
+                font-weight: 700;
+            }
+        }
+    }
 }
 
 

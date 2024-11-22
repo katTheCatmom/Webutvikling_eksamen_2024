@@ -74,28 +74,31 @@
                 <!-- Produktkort: -->
                 <!-- section i section: https://stackoverflow.com/questions/9916354/is-it-valid-to-have-a-section-tag-inside-another-section-tag -->
                 <section>
-                    <article>
+                    <article class="product-card">
                         <!-- Bilde -->
                         <picture>
                             <!-- <source> for mediaqueries må huskes!-->
-                            <img src="https://picsum.photos/id/177/200/300" alt="produktkort"> <!-- Finn bedre alt, evt størrelse også. -->
+                            <img src="https://picsum.photos/id/177/500/" alt="produktkort"> <!-- Finn bedre alt, evt størrelse også. -->
                         </picture>
-                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-heart product-heart fa-lg"></i>
                         <!-- Produktnavn -->
                         <a href="product.html">Product name</a>
 
                         <!-- Pris -->                                   <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
-                        <p>Kr 1900,-</p>
+                        <p class="price">Kr 1900,-</p>
 
-                        <!-- Stjerner -->                               <!-- !! microdata !! -->
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-
-                        <!-- Liten tekst om antall anmeldelser -->      <!-- !! microdata !! -->
-                        <p>842 Reviews</p>
+                        <ul class="reviews">
+                            <!-- Stjerner -->                               <!-- !! microdata !! -->
+                            <li>
+                                <i class="fa-solid fa-star good-star"></i>
+                                <i class="fa-solid fa-star good-star"></i>
+                                <i class="fa-solid fa-star good-star"></i>
+                                <i class="fa-solid fa-star good-star"></i>
+                                <i class="fa-regular fa-star bad-star"></i>
+                            </li>
+                            <!-- Liten tekst om antall anmeldelser -->      <!-- !! microdata !! -->
+                            <li><p>842 Reviews</p></li>
+                        </ul>
                     </article>
                 </section>
             </section>
@@ -167,7 +170,7 @@
                     <li><i class="fa-solid fa-location-dot"></i><span>Adresse:</span>B R A Veien 4, 1757 Halden</li> <!-- Er det en egen href for adresse?-->
                     <li><i class="fa-solid fa-phone"></i><span>Telefon:</span><a href="tel:+469608000">(+47) 69 60 80 00</a></li>
                     <li><i class="fa-solid fa-envelope"></i><span>E-post:</span> <a href="mailto:halden@hiof.no">halden@hiof.no</a></li>
-                    <li><i class="fa-solid fa-clock"></i><span>Åpningstider:</span> Stenger 15:00</p></li>
+                    <li><i class="fa-solid fa-clock"></i><p><span>Åpningstider:</span> Stenger 15:00</p></li>
                 </ul>
             </section>
             <section>
@@ -183,10 +186,10 @@
             <section id="footer-sosialemedier">
                 <h4>SOSIALE MEDIER</h4>
                 <ul>
-                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-lg"></i></a>
-                    <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook fa-lg"></i></a>
-                    <a href="https://no.linkedin.com/"><i class="fa-brands fa-linkedin fa-lg"></i></a>
-                    <a href="https://no.pinterest.com/"><i class="fa-brands fa-pinterest fa-lg"></i></a>
+                    <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-lg"></i></a></li>
+                    <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook fa-lg"></i></a></li>
+                    <li><a href="https://no.linkedin.com/"><i class="fa-brands fa-linkedin fa-lg"></i></a></li>
+                    <li><a href="https://no.pinterest.com/"><i class="fa-brands fa-pinterest fa-lg"></i></a></li>
                 </ul>
             </section>
             <a href="#toppen" id="hopp-til-toppen">Hopp til toppen</a>
