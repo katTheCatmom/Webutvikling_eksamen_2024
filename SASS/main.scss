@@ -85,7 +85,7 @@ body {
 }
 
 
-// FORSIDE //
+                                                // FORSIDE //
 #grid-container-forside {
     display: grid;
     grid-template-columns: 1fr;
@@ -126,10 +126,10 @@ body {
     }
 }
 
-
+// MEST POPULÆRE PRODUKTER
 #produkter {
 
-    #populaereProdukter {
+    .populaereProdKat {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -253,6 +253,24 @@ body {
         }
     }
 }
+
+// MEST POPULÆRE KATEGORIER
+#kategorier {
+    .populaereProdKat {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+        
+        h2 {
+            text-align: center;
+            font-size: 300%;
+            margin: 1rem;
+        }
+    }
+}
+
 
 
 
