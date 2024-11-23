@@ -275,14 +275,78 @@ body {
   font-size: 300%;
   margin: 1rem;
 }
-#kategorier .kategorikort picture {
-  width: 100%;
-  filter: blur(3px);
+#kategorier article {
+  position: relative;
+  padding: 0.5rem;
 }
-#kategorier .kategorikort picture img {
+#kategorier article .kategorikort {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
+}
+#kategorier article .kategorikort h3 {
+  position: absolute;
+  font-size: 2rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+#kategorier article .kategorikort picture img {
   width: 100%;
   height: 100%;
   border-radius: 20px;
+}
+
+#anmeldelser {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+}
+#anmeldelser h2 {
+  width: 100%;
+  font-size: xx-large;
+  font-weight: 800;
+}
+#anmeldelser .anmelder {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1.5px solid #b5b5b5;
+  border-radius: 30px;
+}
+#anmeldelser .anmelder img {
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 50%;
+}
+#anmeldelser .anmelder .anm-navn {
+  width: 100%;
+  font-weight: 600;
+  font-size: larger;
+  margin: 0;
+}
+#anmeldelser .anmelder ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+#anmeldelser .anmelder ol li {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+}
+#anmeldelser .anmelder p {
+  margin: 0;
+  margin-bottom: 1rem;
 }
 
 #global-footer {
