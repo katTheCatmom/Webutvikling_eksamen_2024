@@ -11,7 +11,7 @@ body {
 }
 
 
-/* GLOBAL HEADER */
+                                                /* GLOBAL HEADER */
 #global-header {
     display: flex;
     flex-direction: row;
@@ -386,6 +386,31 @@ body {
         }
     }
 }
+                                                        /* PRODUKTSIDE */
+#breadcrumbs {
+    ol {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 1rem;
+        padding: 0;
+        list-style: none;
+
+        #current-location {
+            font-weight: 600;
+        }
+        li {
+            color: #1c1c1c;
+
+            a {
+                color: #1c1c1c;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+
 
 
                                                         /* CHECKOUT */
