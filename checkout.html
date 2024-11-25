@@ -205,32 +205,33 @@
         </section>
 
         <!-- Seksjon 4 - Kortinformasjon + samtykke -->
-        <section>
-            <h2>4. Betaling</h2>
+        <section id="betaling">
+            <h2>4. BETALING</h2>
             <form>
-                <h3>Betal med kort<i class="fa-solid fa-credit-card"></i></h3>
+                <h3>BETAL MED KORT<i class="fa-solid fa-credit-card"></i></h3>
 
                 <label for="kortnummer">Kortnummer</label>
-                <input type="text" name="kortnummer" id="kortnummer">
+                <input type="text" name="kortnummer" id="kortnummer" placeholder="123456****5432">
 
                 <label for="utlopsdato">Utløpsdato</label>
                 <input type="date" name="utlopsdato" id="utlopsdato">
 
                 <label for="cvccvv">CVC/CVV</label>
-                <input type="text" name="cvccvv" id="cvccvv">
+                <input type="text" name="cvccvv" id="cvccvv" placeholder="CVC/CVV">
             </form>
-            <p>Å betale inkl. mva.<span>1199 kr</span></p>
-            <input type="submit" value="Fullfør kjøp">
+            <p>Å betale inkl. mva.</p>
+            <p id="totalpris">1 199 kr</p>
+            <input type="submit" value="Fullfør kjøp" class="btn">
             <p>Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte
                 og fullstendige. Leverandøren forbeholder seg retten til å å heve eller avslutte
                 avtaleforholdet dersom det foreligger uriktige eller ufullstendige opplysninger.
             </p>
-            <input type="checkbox" id="nyhetsbrev">
-            <label for="nyhetsbrev">Ja takk! Send nyhetsbrev til meg.</label>
-
-            <input type="checkbox" id="tilbud">
-            <label for="tilbud">Jeg ønsker å motta tekstmeldinger med tilbud og nyheter.</label>
+            <form id="nyheter">
+                <label for="nyhetsbrev"><input type="checkbox" id="nyhetsbrev">Ja takk! Send nyhetsbrev til meg.</label>
+                <label for="tilbud"><input type="checkbox" id="tilbud">Jeg ønsker å motta tekstmeldinger med tilbud og nyheter.</label>
+            </form>
         </section>
+
          <footer id="global-footer">   
             <section id="footer-ingress">
                 <img src="bilder/logo1c1c1c.png" alt="Bedriftens logo" width="65">   <!-- bedre alt -->
