@@ -11,27 +11,115 @@
     <title>handlekurv</title>
 </head>
 <body>
-    <main>
-        <!-- Overskrift -->
-        <h1>Kasse</h1>
-        <a href="#">(pilikon) fortsett å handle</a> <!-- Finn riktig lenking -->
-        <!-- Seksjon 1 - Shoppingbag -->
-        <section>
-            <h2>1. SHOPPINGBAGEN DIN</h2>
-        </section>
-        <!-- - min. 2 produktkort
-                    - bilde
-                    - produktnavn
-                    - pris
-                    - farge
-                    - størrelse
-                    - antall av det samme produktet
-                    - ikoner (se bilder)
-        -->
+    <main id="kasse">
+        <header id="global-header">
+            <form id="toppen"> <!-- Method? -->
+                <!-- Lurt med label? (mtp høytopplesning)-->
+                <label>
+                    <input type="search" placeholder="søk her" id="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </label>
+            </form>
+            <nav>
+                <ul>        <!-- ENDRE LINKIN TIL RIKTIG KLASSE -->
+                    <li><a href="index.html">Hjem</a></li>
+                    <li><a href="index.html#populaereProdukter">Produkter</a></li>
+                    <li class="logo">
+                        <a href="index.html">
+                            <img src="bilder/logo1c1c1c.png" width="100" alt="Nettsidens logo"> <!-- Bedre alt? -->
+                        </a>
+                    </li>
+                    <li><a href="#populaereKategorier">Kategorier</a></li>
+                    <li><a href="#kontaktOss">Kontakt oss</a></li>
+                </ul>
+            </nav>
+            <ul id="header-ikonmeny">
+                <li><i class="fa-regular fa-user"></i></li> <!-- User icon-->
+                <li><i class="fa-regular fa-heart"></i></li> <!-- Heart icon -->
+                <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li> <!-- Shopping cart-->
+            </ul>
+        </header>
 
-    
-        <!-- Seksjon 2 - personopplysninger -->
-        <section>
+        <a href="#" id="handle-mer"><i class="fa-solid fa-arrow-left"></i> Fortsett å handle</a> <!-- Finn riktig lenking -->
+        
+        <h1>Kasse</h1>
+        
+        <section id="shoppingbag">
+            <h2>1. SHOPPINGBAGEN DIN</h2>
+            <article class="handlevogn-vare">
+                <picture>
+                    <img src="bilder/checkout-150x261.png" alt="varebilde">
+                </picture>
+                <p class="produktnavn">PRODUCT NAME</p>
+                <p>Kr 1999</p>
+                <p>Farge: beige</p>
+                <form>
+                    <label for="size-en">Størrelse</label>
+                    <select name="size" id="size-en">
+                        <option value="XS">XS</option>      <!-- Sjekk om det er "lovlige" values-->
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                    <!-- "Legg til i handlekurv" knapp-->
+                    <label for="quantity-en">Antall</label>
+                    <input type="number" id="quantity-en"> 
+                </form>
+                <i class="fa-regular fa-heart fa-lg"></i>
+                <i class="fa-solid fa-trash fa-lg"></i>
+            </article>
+
+            <article class="handlevogn-vare">
+                <picture>
+                    <img src="bilder/checkout-150x261.png" alt="varebilde">
+                </picture>
+                <p class="produktnavn">PRODUCT NAME</p>
+                <p>Kr 1999</p>
+                <p>Farge: beige</p>
+                <form>
+                    <label for="size-to">Størrelse</label>
+                    <select name="size" id="size-to">
+                        <option value="XS">XS</option>      <!-- Sjekk om det er "lovlige" values-->
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                    <!-- "Legg til i handlekurv" knapp-->
+                    <label for="quantity-to">Antall</label>
+                    <input type="number" id="quantity-to"> 
+                </form>
+                <i class="fa-regular fa-heart fa-lg"></i>
+                <i class="fa-solid fa-trash fa-lg"></i>
+            </article>
+
+            <article class="handlevogn-vare">
+                <picture>
+                    <img src="bilder/checkout-150x261.png" alt="varebilde">
+                </picture>
+                <p class="produktnavn">PRODUCT NAME</p>
+                <p>Kr 1999</p>
+                <p>Farge: beige</p>
+                <form>
+                    <label for="size-tre">Størrelse</label>
+                    <select name="size" id="size-tre">
+                        <option value="XS">XS</option>      <!-- Sjekk om det er "lovlige" values-->
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                    <!-- "Legg til i handlekurv" knapp-->
+                    <label for="quantity-tre">Antall</label>
+                    <input type="number" id="quantity-tre"> 
+                </form>
+                <i class="fa-regular fa-heart fa-lg"></i>
+                <i class="fa-solid fa-trash fa-lg"></i>
+            </article>
+        </section>
+
+        <section id="dine-opplysninger">
             <h2>2. DINE OPPLYSNINGER</h2>
             
             <form method="get">  <!-- Method -> Referanse i notepad --> <!-- Legge inn action="" ?-->
@@ -54,16 +142,13 @@
 
                 <label for="postnummer">
                     Postnummer
-                    <input type="number" name="adresse" id="postnummer" placeholder="1752*" maxlength="4" pattern="[0-9]{4}" required>
+                    <input type="text" name="adresse" id="postnummer" placeholder="1752*" maxlength="4" pattern="[0-9]{4}" required>
                 </label>
 
                 <label for="poststed">
                     Poststed
                     <input type="text" name="adresse" id="poststed" placeholder="Halden*" pattern="[A-Za-zæøåÆØÅ ]{2,}" required>
                 </label>
-
-                <input type="submit" value="Lagre">
-                <input type="submit" value="Avbryt">
             </form>
 
             <form method="get">
@@ -78,8 +163,10 @@
                     Telefon
                     <input type="tel" name="telefonnummer" id="telefonnr" placeholder="+4749***018" pattern="[0-9]{8,12}">
                 </label>
+                <input type="submit" value="Lagre" class="btn">
+                <input type="submit" value="Avbryt" id="cancel">
             </form>
-
+            
         </section>
 
         <!-- Seksjon 3 - Levering -->
@@ -121,19 +208,66 @@
         <section>
             <h2>4. Betaling</h2>
             <form>
-                
+                <h3>Betal med kort<i class="fa-solid fa-credit-card"></i></h3>
+
+                <label for="kortnummer">Kortnummer</label>
+                <input type="text" name="kortnummer" id="kortnummer">
+
+                <label for="utlopsdato">Utløpsdato</label>
+                <input type="date" name="utlopsdato" id="utlopsdato">
+
+                <label for="cvccvv">CVC/CVV</label>
+                <input type="text" name="cvccvv" id="cvccvv">
             </form>
+            <p>Å betale inkl. mva.<span>1199 kr</span></p>
+            <input type="submit" value="Fullfør kjøp">
+            <p>Du bekrefter herved at opplysningene og dokumentene du har oppgitt er korrekte
+                og fullstendige. Leverandøren forbeholder seg retten til å å heve eller avslutte
+                avtaleforholdet dersom det foreligger uriktige eller ufullstendige opplysninger.
+            </p>
+            <input type="checkbox" id="nyhetsbrev">
+            <label for="nyhetsbrev">Ja takk! Send nyhetsbrev til meg.</label>
+
+            <input type="checkbox" id="tilbud">
+            <label for="tilbud">Jeg ønsker å motta tekstmeldinger med tilbud og nyheter.</label>
         </section>
-         <!-- - Skjema
-                - Kortnummer
-                - Utløpsdato
-                - CVC/CVV
-                - Knapp
-                - Ansvar-samtykke
-                - vilkår-samtykke
-                - nyhetsbrev 
-                - ikon for kort
-         -->
+         <footer id="global-footer">   
+            <section id="footer-ingress">
+                <img src="bilder/logo1c1c1c.png" alt="Bedriftens logo" width="65">   <!-- bedre alt -->
+                <p>
+                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis. 
+                </p>
+            </section>
+            <section id="footer-kontakt">
+                <h4 id="kontaktOss">KONTAKT</h4>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i><span>Adresse:</span>B R A Veien 4, 1757 Halden</li> <!-- Er det en egen href for adresse?-->
+                    <li><i class="fa-solid fa-phone"></i><span>Telefon:</span><a href="tel:+469608000">(+47) 69 60 80 00</a></li>
+                    <li><i class="fa-solid fa-envelope"></i><span>E-post:</span> <a href="mailto:halden@hiof.no">halden@hiof.no</a></li>
+                    <li><i class="fa-solid fa-clock"></i><p><span>Åpningstider:</span> Stenger 15:00</p></li>
+                </ul>
+            </section>
+            <section>
+                <nav id="footer-snarveier">
+                    <h4>SNARVEIER</h4>
+                    <ul>
+                        <li><a href="index.html#populaereProdukter">Produkter</a></li>
+                        <li><a href="index.html#populaereKategorier">Kategorier</a></li>
+                        <li><a href="#kontaktOss">Kontakt oss</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <section id="footer-sosialemedier">
+                <h4>SOSIALE MEDIER</h4>
+                <ul>
+                    <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-lg"></i></a></li>
+                    <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook fa-lg"></i></a></li>
+                    <li><a href="https://no.linkedin.com/"><i class="fa-brands fa-linkedin fa-lg"></i></a></li>
+                    <li><a href="https://no.pinterest.com/"><i class="fa-brands fa-pinterest fa-lg"></i></a></li>
+                </ul>
+            </section>
+            <a href="#toppen" id="hopp-til-toppen">Hopp til toppen</a>
+        </footer>
     </main>
 </body>
 </html>
