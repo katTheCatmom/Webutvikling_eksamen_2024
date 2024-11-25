@@ -439,4 +439,19 @@ body {
   justify-content: center;
   width: 100%;
   text-decoration: underline;
+}
+
+form {
+  margin-top: 2rem;
+}
+form label {
+  margin-left: 1.5rem;
+}
+form select {
+  padding: 1rem;
+  border: 0;
+}
+form input {
+  padding: 1rem;
+  width: 5rem;
 }/*# sourceMappingURL=main.css.map */

@@ -462,3 +462,21 @@ body {
         text-decoration: underline;
     }
 }
+
+form {
+    margin-top: 2rem;
+    
+    label {
+        margin-left: 1.5rem;
+    }
+
+    select {
+        padding: 1rem;
+        border: 0;
+    }
+
+    input {
+        padding: 1rem;
+        width: 5rem;
+    }
+}
