@@ -310,9 +310,6 @@ body {
 
 // ANMELDELSER
 #anmeldelser {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     padding: 0.5rem;
 
     h2 {
@@ -324,7 +321,7 @@ body {
     .anmelder {
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         gap: 1rem;
         padding: 1rem;
 

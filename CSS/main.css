@@ -303,9 +303,6 @@ body {
 }
 
 #anmeldelser {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   padding: 0.5rem;
 }
 #anmeldelser h2 {
@@ -316,7 +313,7 @@ body {
 #anmeldelser .anmelder {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 1rem;
   padding: 1rem;
   border: 1.5px solid #b5b5b5;
