@@ -101,6 +101,32 @@
                             <li><p>842 Reviews</p></li>
                         </ul>
                     </article>
+                    <article class="product-card">
+                        <!-- Bilde -->
+                        <picture>
+                            <!-- <source> for mediaqueries må huskes!-->
+                            <img src="bilder/produktkort-mobil.png" alt="produktkort"> <!-- Finn bedre alt, evt størrelse også. -->
+                        </picture>
+                        <i class="fa-regular fa-heart product-heart fa-lg"></i>
+                        <!-- Produktnavn -->
+                        <a href="product.html">Product name</a>
+
+                        <!-- Pris -->                                   <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
+                        <p class="price">Kr 1900,-</p>
+
+                        <ul class="reviews">
+                            <!-- Stjerner -->                               <!-- !! microdata !! -->
+                            <li>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </li>
+                            <!-- Liten tekst om antall anmeldelser -->      <!-- !! microdata !! -->
+                            <li><p>842 Reviews</p></li>
+                        </ul>
+                    </article>
                 </section>
             </section>
 
@@ -161,7 +187,43 @@
                         <!-- Anmeldelser -->
             <section id="anmeldelser">
                 <h2>Anmeldelser</h2>
-                <section class="slide-container">
+                <section class="scroll-container">
+                    <article class="anmelder">
+                        <img src="bilder/anmelder-100x100.png" alt="Anmelder">
+                        <p class="anm-navn">Mari Coon</p>
+                        <ol>
+                            <li>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </li>
+                        </ol>
+                        <!-- Anmeldertekst -->
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce malesuada, erat et feugiat varius, 
+                            nibh nulla venenatis quam, id ultricies quam libero quis ex. Nulla posuere arcu nec nibh dictum viverra.
+                            Quisque ligula lorem, fringilla in est a, commodo sodales ipsum. Maecenas et efficitur lorem.
+                            Duis ac finibus dui, eu semper orci. Proin interdum luctus ante, vitae dapibus nunc pretium eget.</p>
+                    </article>
+                    <article class="anmelder">
+                        <img src="bilder/anmelder-100x100.png" alt="Anmelder">
+                        <p class="anm-navn">Mari Coon</p>
+                        <ol>
+                            <li>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </li>
+                        </ol>
+                        <!-- Anmeldertekst -->
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce malesuada, erat et feugiat varius, 
+                            nibh nulla venenatis quam, id ultricies quam libero quis ex. Nulla posuere arcu nec nibh dictum viverra.
+                            Quisque ligula lorem, fringilla in est a, commodo sodales ipsum. Maecenas et efficitur lorem.
+                            Duis ac finibus dui, eu semper orci. Proin interdum luctus ante, vitae dapibus nunc pretium eget.</p>
+                    </article>
                     <article class="anmelder">
                         <img src="bilder/anmelder-100x100.png" alt="Anmelder">
                         <p class="anm-navn">Mari Coon</p>

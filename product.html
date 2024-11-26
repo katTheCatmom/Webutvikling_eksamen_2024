@@ -33,12 +33,12 @@
             </ul>
         </nav>
         <ul id="header-ikonmeny">
-            <li><i class="fa-regular fa-user"></i></li> <!-- User icon-->
-            <li><i class="fa-regular fa-heart"></i></li> <!-- Heart icon -->
-            <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li> <!-- Shopping cart-->
+            <li><i class="fa-regular fa-user"></i></li> 
+            <li><i class="fa-regular fa-heart"></i></li> 
+            <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
         </ul>
     </header>
-    <!-- Brødsmulesti -->
+
     <nav id="breadcrumbs">
         <ol>
             <li>
@@ -55,7 +55,6 @@
         </ol>
     </nav>
     <main id="produktside">
-        <!-- Område 1 - Bilder -->
         <section id="bildegalleri"> 
             <picture id="liten-en">
                 <img src="bilder/produktside-liten.png"  alt="produktbilde">
@@ -71,21 +70,17 @@
             </picture>
         </section>
 
-        <!-- Område 2 Produktinfo-->
-        <section>               <!-- SJekk inspector for shoosies (uke 44, 01.11)-->
+        <section>             
            <header>
-                <!-- Overskrift - Produktnavn -->
                 <h1>Produktnavn</h1>
-                <!-- Lenke til merke -->
                 <h3 id="merkenavn"><a href="#">MERKENAVN</a></h3>    <!-- Fiks lenke, ikke #-->
             </header> 
             <ul>
-                <!-- Pris -->
                 <li><p>5 195 kr inkl. mva.</p></li>
-                <!-- Farge-informasjon -->
                 <li><p>Farge: <span>Beige</span></p></li>
             </ul>
-            <!-- Nedtrekksmeny (valg av strl). Hentet fra uke44, 01.11  -->
+
+            <!-- Nedtrekksmeny (valg av strl). Hentet fra forelesning uke44, 01.11  -->
             <section>
                 <form id="handlevalg">
                     <label for="size"></label>
@@ -97,15 +92,12 @@
                         <option value="L">L</option>
                         <option value="XL">XL</option>
                     </select>
-                    <!-- "Legg til i handlekurv" knapp-->
+                    
                     <button id="handlekurv">Legg til i handlekurv</button>
                     <button id="favoritt"><i class="fa-regular fa-heart fa-lg"></i></button>
                 </form>
-                <!--  Favorittknapp -->
-                
             </section>
             
-            <!-- Materiale og vedlikehold -->
             <section id="detaljer">
                 <details>
                     <summary>Materiale og vedlikehold<i class="fa-regular fa-plus"></i></summary>
@@ -122,13 +114,11 @@
                     </ul>
                 </details>
             
-            <!-- Produktdetaljer -->
                 <details>
                     <summary>Produktdetaljer<i class="fa-regular fa-plus"></i></summary>
                     <p class="produktdetaljer">Maecenas rhoncus scelerisque ex vel placerat. Proin quis tellus turpis. Pellentesque eget dolor ornare, blandit ligula vitae, fringilla quam. Maecenas lectus massa, eleifend ac elit ut, eleifend sollicitudin justo. Sed tempus eget metus vitae pulvinar. Nam molestie massa vitae euismod vulputate.</p>
                 </details>
 
-            <!-- Størrelsestabell -->
                 <details>
                 <summary>Størrelsestabell<i class="fa-regular fa-plus"></i></summary>
                     <p class="produktdetaljer">
@@ -270,14 +260,16 @@
                             32
                         </span>
                     </summary>
-                    <article>
+                    <article id="produkt-anmelder">
                         <p>Mari Coon</p>
                         <p>2024-10-02</p> <!-- Egen tag for tid? -->
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
+                        <ol>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </ol>
                         <p>Duis risus sapien, sagittis non sapien condimentum, lacinia fermentum neque. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
                     </article>
                 </details>
@@ -291,30 +283,113 @@
             <a href="#">Se flere lignende produkter<i class="fa-solid fa-arrow-right"></i></a>
         </header>
         <!-- Produktkort -->
-        <article>
-            <!-- Bilde -->
-            <picture>
-                <!-- <source> for mediaqueries må huskes!-->
-                <img src="https://picsum.photos/id/1078/200/300" alt="Lignende produkter"> <!-- Finn bedre alt, evt størrelse også. -->
-            </picture>
-            <i class="fa-regular fa-heart"></i>
+        <section class="scroll-container">
+            <article class="relaterte-produkter">
+                <picture>
+                    <!-- <source> for mediaqueries må huskes!-->
+                    <img src="bilder/relaterte-250x250.png" alt="Lignende produkter"> <!-- Finn bedre alt, evt størrelse også. -->
+                </picture>
+                <i class="fa-regular fa-heart favoritt"></i>
 
-            <!-- Produktnavn -->
-            <a href="product.html">Product name</a>     <!-- Riktig lenking? -->
+                <a href="product.html">Product name</a>     <!-- Riktig lenking? -->
 
-            <!-- Pris -->                                   <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
-            <p>Kr 1900,-</p>
+                                                <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
+                <p>Kr 1900,-</p>
 
-            <!-- Stjerner -->                               <!-- !! microdata !! -->
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-regular fa-star"></i>
+                <ol>                             <!-- !! microdata !! -->
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-regular fa-star"></i></li>
+                    <li>842 Reviews</li> <!-- !! microdata !! -->
+                </ol>    
+            </article>
+            <article class="relaterte-produkter">
+                <picture>
+                    <!-- <source> for mediaqueries må huskes!-->
+                    <img src="bilder/relaterte-250x250.png" alt="Lignende produkter"> <!-- Finn bedre alt, evt størrelse også. -->
+                </picture>
+                <i class="fa-regular fa-heart favoritt"></i>
 
-            <!-- Liten tekst om antall anmeldelser -->      <!-- !! microdata !! -->
-            <p>842 Reviews</p>
-        </article>
+                <a href="product.html">Product name</a>     <!-- Riktig lenking? -->
+
+                                                <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
+                <p>Kr 1900,-</p>
+
+                <ol>                             <!-- !! microdata !! -->
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-regular fa-star"></i></li>
+                    <li>842 Reviews</li> <!-- !! microdata !! -->
+                </ol>    
+            </article>
+            <article class="relaterte-produkter">
+                <picture>
+                    <!-- <source> for mediaqueries må huskes!-->
+                    <img src="bilder/relaterte-250x250.png" alt="Lignende produkter"> <!-- Finn bedre alt, evt størrelse også. -->
+                </picture>
+                <i class="fa-regular fa-heart favoritt"></i>
+
+                <a href="product.html">Product name</a>     <!-- Riktig lenking? -->
+
+                                                <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
+                <p>Kr 1900,-</p>
+
+                <ol>                             <!-- !! microdata !! -->
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-regular fa-star"></i></li>
+                    <li>842 Reviews</li> <!-- !! microdata !! -->
+                </ol>    
+            </article>
+            <article class="relaterte-produkter">
+                <picture>
+                    <!-- <source> for mediaqueries må huskes!-->
+                    <img src="bilder/relaterte-250x250.png" alt="Lignende produkter"> <!-- Finn bedre alt, evt størrelse også. -->
+                </picture>
+                <i class="fa-regular fa-heart favoritt"></i>
+
+                <a href="product.html">Product name</a>     <!-- Riktig lenking? -->
+
+                                                <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
+                <p>Kr 1900,-</p>
+
+                <ol>                             <!-- !! microdata !! -->
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-regular fa-star"></i></li>
+                    <li>842 Reviews</li> <!-- !! microdata !! -->
+                </ol>    
+            </article>
+            <article class="relaterte-produkter">
+                <picture>
+                    <!-- <source> for mediaqueries må huskes!-->
+                    <img src="bilder/relaterte-250x250.png" alt="Lignende produkter"> <!-- Finn bedre alt, evt størrelse også. -->
+                </picture>
+                <i class="fa-regular fa-heart favoritt"></i>
+
+                <a href="product.html">Product name</a>     <!-- Riktig lenking? -->
+
+                                                <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
+                <p>Kr 1900,-</p>
+
+                <ol>                             <!-- !! microdata !! -->
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-solid fa-star"></i></li>
+                    <li><i class="fa-regular fa-star"></i></li>
+                    <li>842 Reviews</li> <!-- !! microdata !! -->
+                </ol>    
+            </article>
+        </section>
     </aside>
     
     <footer id="global-footer">   
