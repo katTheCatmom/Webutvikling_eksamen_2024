@@ -11,7 +11,7 @@
     <title>Forside</title>
 </head>
 <body id="forside">
-    <div id="grid-container-forside">
+    <div id="container">
         <header id="global-header">
             <form id="toppen"> <!-- Method? -->
                 <!-- Lurt med label? (mtp høytopplesning)-->
@@ -40,8 +40,8 @@
             </ul>
         </header>
         <main>
-                        <!-- Slider -->
-            <section id="sliderForside">
+                        <!-- header mobil-->
+            <section id="headerForside">
                 <header>
                     <h2>Et harum quidem rerum facilis est et expedita distinctio.</h2>
                     <p>Nam liberto tempore, cum soluta nobis est eligendi optio cumque
@@ -53,6 +53,27 @@
                 </header> 
             </section>
 
+                        <!--slider desktop -->
+            <section id="sliderForside">
+                    <article>
+                    <!--<i class="fa-solid fa-arrow-left"></i>
+                        <i class="fa-solid fa-arrow-right"></i>
+                        
+                        <h2>Et harum quidem rerum facilis est et expedita distinctio.</h2>-->
+                        <img src="bilder/slider-forside-1.png" alt="Første nyhet">
+                        
+                    </article>
+                
+                    <article id="slider-to">
+                        
+                        <img src="bilder/slider-forside-2.png" alt="Første nyhet">
+                    </article>
+                    
+                    <article id="slider-tre">
+                    
+                        <img src="bilder/slider-forside-3.png" alt="Første nyhet">
+                    </article>
+            </section>
                         <!-- Mest populære produkter -->
             <section id="produkter">
                 <article class="populaereProdKat">
@@ -214,7 +235,6 @@
                     <h2>Våre mest populære kategorier</h2>
                     <p>Oppdag det beste av det beste</p>
                 </article>
-                
                 <!-- Her skal kategorikortene komme! -->
                 <article>
                     <!-- Ha de begge inni en <a> tag på noe vis. Også z(?)-index for at bildet havner i bakgrunn, for så å sentrere "kategori 1" midten oppå-->
@@ -256,8 +276,7 @@
                         </picture>
                         <h3>Kategori 5</h3>
                     </a>
-                </article>
-                
+                </article>    
             </section>
 
 
