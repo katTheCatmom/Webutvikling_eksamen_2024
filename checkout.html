@@ -164,7 +164,7 @@
                     <input type="tel" name="telefonnummer" id="telefonnr" placeholder="+4749***018" pattern="[0-9]{8,12}">
                 </label>
                 <input type="submit" value="Lagre" class="btn">
-                <input type="submit" value="Avbryt" id="cancel">
+                <button id="cancel">Avbryt</button>
             </form>
             
         </section>
@@ -227,7 +227,7 @@
                 avtaleforholdet dersom det foreligger uriktige eller ufullstendige opplysninger.
             </p>
             <form id="nyheter">
-                <label for="nyhetsbrev"><input type="checkbox" id="nyhetsbrev">Ja takk! Send nyhetsbrev til meg.</label>
+                <label for="nyhetsbrev"><input type="checkbox" id="nyhetsbrev" required>Ja, jeg godtar vilkårene.</label>
                 <label for="tilbud"><input type="checkbox" id="tilbud">Jeg ønsker å motta tekstmeldinger med tilbud og nyheter.</label>
             </form>
         </section>
