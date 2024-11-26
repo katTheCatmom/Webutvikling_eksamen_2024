@@ -148,7 +148,7 @@ body {
             }
 
             img {
-                z-index: -1;
+                z-index: -1; /*https://www.w3schools.com/cssref/pr_pos_z-index.php*/
                 position: absolute;
                 width: 100%;
                 height: 100%;
@@ -252,8 +252,8 @@ body {
                 height: 2.5rem;
                 
                 color: #ffffff;
-                background-color: #b5b5b5;
-                backdrop-filter: blur(20px);
+                background-color: rgba(255, 255, 255, 0.5);
+                backdrop-filter: blur(5px);
                 border-radius: 50px;
             }
         
@@ -319,32 +319,35 @@ body {
                 gap: 1rem;
                 justify-content: center;
                 align-items: center;
-            
+                
                 text-decoration: none;
                 color: #ffffff;
-            
+                border: 2px solid #1c1c1c;
                 
-
+                
                 h3 {
                     position: absolute;
-                    font-size: 2rem;    
-                    background-color: rgba(255, 255, 255, 0.5);
-                    backdrop-filter: blur(5px);
-                }
+                    width: 95%;
+                    height: 93.5%;
 
+                    font-size: 2rem;
+                    text-align: center;
+                    background-color: rgba(255, 255, 255, 0.5);
+                    backdrop-filter: blur(2px);
+                    border-radius: 20px;
+                }
+              
                 picture {
                     width: 100%;
                     img {
                         width: 100%;
                         height: 100%;
-                    
                         border-radius: 20px;
                     }
                 }
             }
         }
     }
-
     /* ANMELDELSER */
     #anmeldelser {
         padding: 0.5rem;
