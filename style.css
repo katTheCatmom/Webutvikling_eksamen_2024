@@ -214,7 +214,9 @@ body {
 
         #produkt-samling {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 1rem;
         }
 
@@ -224,21 +226,17 @@ body {
             flex-direction: row;
             flex-wrap: wrap;
             gap: 1rem;
-            justify-content: space-between;
-            width: 100%;
-            max-width: 100%;
+            justify-content: space-between; 
+            width: 100%;      
             padding: 0.5rem;
             padding-bottom: 2rem;
             position: relative;
             
             picture {
                 width: 100%;
-
                 img {
-                    width: 100%;
-                    
+                    width: 100%; 
                     height: 100%;
-                    
                     border-radius: 30px;
                 }
             }
@@ -628,9 +626,8 @@ body {
     }
 }
 
-aside {
+#lignende-produkter {
     padding: 1rem;
-    padding-bottom: 3rem;
     header {
         display: flex;
         flex-direction: column;
@@ -972,7 +969,22 @@ aside {
 }
 
 
-                                                        /* GLOBAL FOOTER */
+/* GLOBAL FOOTER */
+#hopp-opp {
+    display: flex;
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 0.5rem;
+    justify-content: flex-end;
+    
+    #hopp-til-toppen {
+        padding: 1rem;
+        color: #ffffff;
+        background-color: #1c1c1c;
+        border: 1.5px solid #1c1c1c;
+    }
+}
+
 #global-footer {
     display: flex;
     flex-direction: row;
@@ -1022,6 +1034,14 @@ aside {
             flex-direction: row;
             flex-wrap: nowrap;
             gap: 0.5rem;
+            
+            p {
+                margin: 0;
+            }
+
+            i {
+                height: fit-content;
+            }
         }
 
         span {
@@ -1052,7 +1072,7 @@ aside {
         flex-wrap: wrap;
         gap: 1rem;
         justify-content: left;
-        width: 100%;
+        padding-top: 2rem;
         
         h4 {
             width: 100%;
@@ -1065,17 +1085,6 @@ aside {
             gap: 1rem;
         }
     }
-
-    #hopp-til-toppen {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        gap: 1rem;
-        justify-content: center;
-        width: 100%;
-
-        text-decoration: underline;
-    }
 }
 
 /* MOBIL */
@@ -1085,9 +1094,56 @@ aside {
     }
 }
 
+/* NETTBRETT*/
+@media only screen and (min-width:600px) and (max-width:799px) {
+    .product-card {
+        width: 42% !important;
+        max-width: 100%;
+    }  
+
+    #kategorier {
+        grid-template-columns: 1fr 1fr !important;
+        grid-template-rows: auto auto auto auto;
+        
+        .kategorikort {
+            width: 100%;
+            height: 100%;
+        }
+        .kategori-top {
+            grid-column: 1 / 3 !important;
+            grid-row: 1 / 2;
+        }
+
+        .kategori-en {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+        }
+
+        .kategori-to {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+        }
+        .kategori-tre {
+            grid-column: 1 / 3;
+            grid-row: 3 / 4;
+            height: 20rem;
+        }
+        .kategori-fire{
+            grid-column: 1 / 2;
+            grid-row: 4 / 5;
+        }
+
+        .kategori-fem{
+            grid-column: 2 / 3;
+            grid-row: 4 / 5;
+        }
+    }
+}
+
+
 /* DESKTOP */
 @media only screen and (min-width:800px) {
-    
+
                                                     /* GLOBAL HEADER */
     #global-header {
         flex-direction: row;
@@ -1412,7 +1468,7 @@ aside {
         }
     }
 
-                                                /* GLOBAL FOOTER */
+                                                /* GLOBAL FOOTER */  
     #global-footer {
         flex-direction: row !important;
         justify-content: space-between;
@@ -1421,6 +1477,7 @@ aside {
         #footer-kontakt,  #footer-snarveier, #footer-sosialemedier {
             flex-direction: column;
             width: fit-content;
+            padding: 0;
         }
     }
 }
