@@ -10,9 +10,39 @@ body {
     font-family: "roboto", sans-serif;
 }
 
+
 #container {   /*https://stackoverflow.com/questions/11088938/is-this-the-best-way-to-make-the-body-max-width-and-centered*/
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.skip-to-content { /*https://github.com/HIO-Webutvikling/WEBUTVIKLING2024/blob/main/UU/forelesning2510/sass/main.scss*/
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    ul {
+        list-style: none;
+
+        li {
+            a {
+                position: absolute;
+                left: -9999px;
+
+                &:focus {
+                    position: static;
+                    left: auto;
+                    margin: 1rem;
+                    padding: 0.5rem 1rem;
+                    background-color: #000;
+                    color: #fff;
+                    border-radius: 4px;
+                    z-index: 1000;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
 }
 
                                                 /* GLOBAL HEADER */
@@ -357,11 +387,18 @@ body {
                 
                 h3 {
                     position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                    margin: 0;
 
+                    color: #ffffff;
                     font-size: 2rem;
-                    text-align: center;
-                    background-color: rgba(255, 255, 255, 0.5);
-                    backdrop-filter: blur(2px);
+                    background-color: rgba(192, 192, 192, 0.3);
+                    backdrop-filter: blur(3px);
+                    border: 2px solid #dadada;
                     border-radius: 20px;
                 }
               
@@ -1180,16 +1217,17 @@ body {
 
     #sliderForside {
         display: flex;
-        overflow-x: auto;
-        gap: 1rem;
+        justify-content: space-between;
+        overflow-x: auto; 
         border-radius: 30px;
         margin: 0.5rem;
 
         .fa-arrow-right {
             position: sticky;
             top: 11rem;
-            left: 72rem;
+            left: 65rem;
             z-index: 1;
+            width: 0;
             height: fit-content;
             font-size: large;
             background-color: rgba(255, 255, 255, 0.5);
@@ -1219,6 +1257,7 @@ body {
             max-height: 40rem;
             width: 55rem;
             position: relative;
+            right: 3rem;
 
             h2 {
                 position: absolute;
@@ -1239,7 +1278,7 @@ body {
                 position: absolute;
                 top: 18.5rem;
                 right: 3rem;
-                padding: 0.8rem;
+                padding: 1rem;
                 color: #1c1c1c;
                 text-decoration: none;
                 font-weight: 500;
@@ -1250,12 +1289,14 @@ body {
             img {
                 z-index: -1;
                 border-radius: 30px;
-                width: 55rem;
+                width: 56rem;
+                max-height: 25rem;
             }
         }
 
         #slider-to {
             text-align: left;
+            right:0.5rem;
             h2, p {
                 left: 3rem;
             }
@@ -1270,7 +1311,7 @@ body {
         #slider-tre {
             text-align: left;
             color: #ffffff;
-            
+            left: 2rem;
             h2, p {    
                 left: 3rem;
                 padding: 0.5rem;
