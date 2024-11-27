@@ -11,423 +11,432 @@
     <title>Produkt</title>
 </head>
 <body>
-    <header id="global-header">
-        <form id="toppen"> <!-- Method? -->
-            <!-- Lurt med label? (mtp høytopplesning)-->
-            <label>
-                <input type="search" placeholder="søk her" id="search">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </label>
-        </form>
-        <nav>
-            <ul>        <!-- ENDRE LINKIN TIL RIKTIG KLASSE -->
-                <li><a href="index.html">Hjem</a></li>
-                <li><a href="index.html#populaereProdukter">Produkter</a></li>
-                <li class="logo">
-                    <a href="index.html">
-                        <img src="bilder/logo1c1c1c.png" width="100" alt="Nettsidens logo"> <!-- Bedre alt? -->
-                    </a>
-                </li>
-                <li><a href="#populaereKategorier">Kategorier</a></li>
-                <li><a href="#kontaktOss">Kontakt oss</a></li>
-            </ul>
-        </nav>
-        <ul id="header-ikonmeny">
-            <li><i class="fa-regular fa-user"></i></li> 
-            <li><i class="fa-regular fa-heart"></i></li> 
-            <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
-        </ul>
-    </header>
-
-    <nav id="breadcrumbs">
-        <ol>
-            <li>
-                <a href="index.html">Hjem</a>
-            </li>
-            <li><i class="fa-solid fa-angle-right"></i></li>
-            <li>
-                <a href="index.html#populaereKategorier">Kategori</a> <!-- Dobbeltsjekk at det er hit man skal linke-->
-            </li>
-            <li><i class="fa-solid fa-angle-right"></i></li>
-            <li id="current-location">
-                <a href="product.html">Produktnavn</a>
-            </li>
-        </ol>
-    </nav>
-    <main id="produktside">
-        <section id="bildegalleri"> 
-            <picture id="liten-en">
-                <img src="bilder/produktside-150x178.png"  alt="produktbilde">
-            </picture>
-            <picture id="liten-to">
-                <img src="bilder/produktside-150x178.png" alt="produktbilde">
-            </picture>
-            <picture id="liten-tre">
-                <img src="bilder/produktside-150x178.png" alt="produktbilde">
-            </picture>
-            <picture id="hovedbilde">
-                <img src="bilder/produktside-150x261.png" alt="produktbilde">
-            </picture>
-        </section>
-
-        <section>             
-           <header>
-                <h1>Produktnavn</h1>
-                <h3 id="merkenavn"><a href="#">MERKENAVN</a></h3>    <!-- Fiks lenke, ikke #-->
-            </header> 
-            <ul>
-                <li><p>5 195 kr inkl. mva.</p></li>
-                <li><p>Farge: <span>Beige</span></p></li>
-            </ul>
-
-            <!-- Nedtrekksmeny (valg av strl). Hentet fra forelesning uke44, 01.11  -->
-            <section>
-                <form id="handlevalg">
-                    <label for="size"></label>
-                    <select name="size" id="size">
-                        <option value="Velg størrelse">Velg størrelse</option>
-                        <option value="XS">XS</option>      <!-- Sjekk om det er "lovlige" values-->
-                        <option value="S">S</option>
-                        <option value="M">M</option>
-                        <option value="L">L</option>
-                        <option value="XL">XL</option>
-                    </select>
-                    
-                    <button id="handlekurv">Legg til i handlekurv</button>
-                    <button id="favoritt"><i class="fa-regular fa-heart fa-lg"></i></button>
-                </form>
-            </section>
-            
-            <section id="detaljer">
-                <details>
-                    <summary>Materiale og vedlikehold<i class="fa-regular fa-plus"></i></summary>
-                    <ul>
-                        <li>
-                            <p>Overmateriale: 95% viskose, 5% elastan</p>
-                        </li>
-                        <li>
-                            <p>Materiale ermer: 100% polyester</p>
-                        </li>
-                        <li>
-                            <p>Materiale: Jersey</p>
-                        </li>
-                    </ul>
-                </details>
-            
-                <details>
-                    <summary>Produktdetaljer<i class="fa-regular fa-plus"></i></summary>
-                    <p class="produktdetaljer">Maecenas rhoncus scelerisque ex vel placerat. Proin quis tellus turpis. Pellentesque eget dolor ornare, blandit ligula vitae, fringilla quam. Maecenas lectus massa, eleifend ac elit ut, eleifend sollicitudin justo. Sed tempus eget metus vitae pulvinar. Nam molestie massa vitae euismod vulputate.</p>
-                </details>
-
-                <details>
-                <summary>Størrelsestabell<i class="fa-regular fa-plus"></i></summary>
-                    <p class="produktdetaljer">
-                        Sjekk hvordan din vanlige størrelse konverterer til andre
-                        størrelser i vår størrelsesguide. Husk at dette er en
-                        generell guide og at størrelsene kan variere i forhold til
-                        merke og modell.
-                    </p>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>EU</th>
-                                <th>INT</th>
-                                <th>BRYSTVIDDE</th>
-                                <th>LIVVIDDE</th>
-                                <th>HOFTEMÅL</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>32</td>
-                                <td>XXS</td>
-                                <td>76</td>
-                                <td>63</td>
-                                <td>85</td>
-                            </tr>
-                            <tr>
-                                <td>34</td>
-                                <td>XS</td>
-                                <td>80</td>
-                                <td>66</td>
-                                <td>89</td>
-                            </tr>
-                            <tr>
-                                <td>36</td>
-                                <td>S</td>
-                                <td>84</td>
-                                <td>69</td>
-                                <td>93</td>
-                            </tr>
-                            <tr>
-                                <td>38</td>
-                                <td>M</td>
-                                <td>88</td>
-                                <td>72</td>
-                                <td>97</td>
-                            </tr>
-                            <tr>
-                                <td>40</td>
-                                <td>L</td>
-                                <td>92</td>
-                                <td>76</td>
-                                <td>100</td>
-                            </tr>
-                            <tr>
-                                <td>42</td>
-                                <td>XL</td>
-                                <td>96</td>
-                                <td>80</td>
-                                <td>103</td>
-                            </tr>
-                            <tr>
-                                <td>44</td>
-                                <td>XXL</td>
-                                <td>100</td>
-                                <td>85</td>
-                                <td>106</td>
-                            </tr>
-                            <tr>
-                                <td>46</td>
-                                <td>3XL</td>
-                                <td>104</td>
-                                <td>90</td>
-                                <td>109</td>
-                            </tr>
-                            <tr>
-                                <td>48</td>
-                                <td>4XL</td>
-                                <td>110</td>
-                                <td>96.5</td>
-                                <td>114</td>
-                            </tr>
-                            <tr>
-                                <td>50</td>
-                                <td>5XL</td>
-                                <td>116</td>
-                                <td>103</td>
-                                <td>119</td>
-                            </tr>
-                            <tr>
-                                <td>52</td>
-                                <td>6XL</td>
-                                <td>122</td>
-                                <td>109.5</td>
-                                <td>124</td>
-                            </tr>
-                            <tr>
-                                <td>54</td>
-                                <td>7XL</td>
-                                <td>128</td>
-                                <td>116</td>
-                                <td>130</td>
-                            </tr>
-                            <tr>
-                                <td>56</td>
-                                <td>8XL</td>
-                                <td>134</td>
-                                <td>122.5</td>
-                                <td>136</td>
-                            </tr>
-                            <tr>
-                                <td>58</td>
-                                <td>9XL</td>
-                                <td>140</td>
-                                <td>129</td>
-                                <td>142</td>
-                            </tr>
-                            <tr>
-                                <td>60</td>
-                                <td>10XL</td>
-                                <td>146</td>
-                                <td>135.5</td>
-                                <td>148</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </details>
-
-            <!-- Anmeldelser -->
-                <details>
-                    <summary>
-                        Anmeldelser
-                        <span>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            32
-                        </span>
-                    </summary>
-                    <article id="produkt-anmelder">
-                        <p>Mari Coon</p>
-                        <p>2024-10-02</p> <!-- Egen tag for tid? -->
-                        <ol>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                        </ol>
-                        <p>Duis risus sapien, sagittis non sapien condimentum, lacinia fermentum neque. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-                    </article>
-                </details>
-            </section>
-        </section>
-    </main>
-    <aside>
-        <header>
-            <!-- Relaterte/Lignende produkter-->
-            <h3>Lignende produkter</h3>
-            <a href="#">Se flere lignende produkter<i class="fa-solid fa-arrow-right"></i></a>
-        </header>
-        <!-- Produktkort -->
-        <section class="scroll-container">
-            <article class="relaterte-produkter">
-                <picture>
-                    <!-- <source> for mediaqueries må huskes!-->
-                    <img src="bilder/relaterte-250x250.png" alt="Lignende produkter"> <!-- Finn bedre alt, evt størrelse også. -->
-                </picture>
-                <i class="fa-regular fa-heart favoritt"></i>
-
-                <a href="product.html">Product name</a>     <!-- Riktig lenking? -->
-
-                                                <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
-                <p>Kr 1900,-</p>
-
-                <ol>                             <!-- !! microdata !! -->
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-regular fa-star"></i></li>
-                    <li>842 Reviews</li> <!-- !! microdata !! -->
-                </ol>    
-            </article>
-            <article class="relaterte-produkter">
-                <picture>
-                    <!-- <source> for mediaqueries må huskes!-->
-                    <img src="bilder/relaterte-250x250.png" alt="Lignende produkter"> <!-- Finn bedre alt, evt størrelse også. -->
-                </picture>
-                <i class="fa-regular fa-heart favoritt"></i>
-
-                <a href="product.html">Product name</a>     <!-- Riktig lenking? -->
-
-                                                <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
-                <p>Kr 1900,-</p>
-
-                <ol>                             <!-- !! microdata !! -->
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-regular fa-star"></i></li>
-                    <li>842 Reviews</li> <!-- !! microdata !! -->
-                </ol>    
-            </article>
-            <article class="relaterte-produkter">
-                <picture>
-                    <!-- <source> for mediaqueries må huskes!-->
-                    <img src="bilder/relaterte-250x250.png" alt="Lignende produkter"> <!-- Finn bedre alt, evt størrelse også. -->
-                </picture>
-                <i class="fa-regular fa-heart favoritt"></i>
-
-                <a href="product.html">Product name</a>     <!-- Riktig lenking? -->
-
-                                                <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
-                <p>Kr 1900,-</p>
-
-                <ol>                             <!-- !! microdata !! -->
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-regular fa-star"></i></li>
-                    <li>842 Reviews</li> <!-- !! microdata !! -->
-                </ol>    
-            </article>
-            <article class="relaterte-produkter">
-                <picture>
-                    <!-- <source> for mediaqueries må huskes!-->
-                    <img src="bilder/relaterte-250x250.png" alt="Lignende produkter"> <!-- Finn bedre alt, evt størrelse også. -->
-                </picture>
-                <i class="fa-regular fa-heart favoritt"></i>
-
-                <a href="product.html">Product name</a>     <!-- Riktig lenking? -->
-
-                                                <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
-                <p>Kr 1900,-</p>
-
-                <ol>                             <!-- !! microdata !! -->
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-regular fa-star"></i></li>
-                    <li>842 Reviews</li> <!-- !! microdata !! -->
-                </ol>    
-            </article>
-            <article class="relaterte-produkter">
-                <picture>
-                    <!-- <source> for mediaqueries må huskes!-->
-                    <img src="bilder/relaterte-250x250.png" alt="Lignende produkter"> <!-- Finn bedre alt, evt størrelse også. -->
-                </picture>
-                <i class="fa-regular fa-heart favoritt"></i>
-
-                <a href="product.html">Product name</a>     <!-- Riktig lenking? -->
-
-                                                <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
-                <p>Kr 1900,-</p>
-
-                <ol>                             <!-- !! microdata !! -->
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-solid fa-star"></i></li>
-                    <li><i class="fa-regular fa-star"></i></li>
-                    <li>842 Reviews</li> <!-- !! microdata !! -->
-                </ol>    
-            </article>
-        </section>
-    </aside>
-    
-    <footer id="global-footer">   
-        <section id="footer-ingress">
-            <img src="bilder/logo1c1c1c.png" alt="Bedriftens logo" width="65">   <!-- bedre alt -->
-            <p>
-                At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis. 
-            </p>
-        </section>
-        <section id="footer-kontakt">
-            <h4 id="kontaktOss">KONTAKT</h4>
-            <ul>
-                <li><i class="fa-solid fa-location-dot"></i><span>Adresse:</span>B R A Veien 4, 1757 Halden</li> <!-- Er det en egen href for adresse?-->
-                <li><i class="fa-solid fa-phone"></i><span>Telefon:</span><a href="tel:+469608000">(+47) 69 60 80 00</a></li>
-                <li><i class="fa-solid fa-envelope"></i><span>E-post:</span> <a href="mailto:halden@hiof.no">halden@hiof.no</a></li>
-                <li><i class="fa-solid fa-clock"></i><p><span>Åpningstider:</span> Stenger 15:00</p></li>
-            </ul>
-        </section>
-        <section>
-            <nav id="footer-snarveier">
-                <h4>SNARVEIER</h4>
-                <ul>
+    <div id="container">
+        <header id="global-header">
+            <form id="toppen"> <!-- Method? -->
+                <!-- Lurt med label? (mtp høytopplesning)-->
+                <label>
+                    <input type="search" placeholder="søk her" id="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </label>
+            </form>
+            <nav>
+                <ul>        <!-- ENDRE LINKIN TIL RIKTIG KLASSE -->
+                    <li><a href="index.html">Hjem</a></li>
                     <li><a href="index.html#populaereProdukter">Produkter</a></li>
-                    <li><a href="index.html#populaereKategorier">Kategorier</a></li>
+                    <li class="logo">
+                        <a href="index.html">
+                            <img src="bilder/logo1c1c1c.png" width="100" alt="Nettsidens logo"> <!-- Bedre alt? -->
+                        </a>
+                    </li>
+                    <li><a href="#populaereKategorier">Kategorier</a></li>
                     <li><a href="#kontaktOss">Kontakt oss</a></li>
                 </ul>
             </nav>
-        </section>
-        <section id="footer-sosialemedier">
-            <h4>SOSIALE MEDIER</h4>
-            <ul>
-                <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-lg"></i></a></li>
-                <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook fa-lg"></i></a></li>
-                <li><a href="https://no.linkedin.com/"><i class="fa-brands fa-linkedin fa-lg"></i></a></li>
-                <li><a href="https://no.pinterest.com/"><i class="fa-brands fa-pinterest fa-lg"></i></a></li>
+            <ul id="header-ikonmeny">
+                <li><i class="fa-regular fa-user"></i></li> 
+                <li><i class="fa-regular fa-heart"></i></li> 
+                <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
             </ul>
-        </section>
-        <a href="#toppen" id="hopp-til-toppen">Hopp til toppen</a>
-    </footer>
+        </header>
+
+        <nav id="breadcrumbs">
+            <ol>
+                <li>
+                    <a href="index.html">Hjem</a>
+                </li>
+                <li><i class="fa-solid fa-angle-right"></i></li>
+                <li>
+                    <a href="index.html#populaereKategorier">Kategori</a> <!-- Dobbeltsjekk at det er hit man skal linke-->
+                </li>
+                <li><i class="fa-solid fa-angle-right"></i></li>
+                <li id="current-location">
+                    <a href="product.html">Produktnavn</a>
+                </li>
+            </ol>
+        </nav>
+        <main id="produktside">
+            <section id="bildegalleri"> 
+                <picture id="liten-en">
+                    <source srcset="bilder/produktside-997x1169.png" media="(min-width:800px)">
+                    <img src="bilder/produktside-150x178.png"  alt="produktbilde">
+                </picture>
+                <picture id="liten-to">
+                    <source srcset="bilder/produktside-997x1169.png" media="(min-width:800px)">
+                    <img src="bilder/produktside-150x178.png" alt="produktbilde">
+                </picture>
+                <picture id="liten-tre">
+                    <source srcset="bilder/produktside-997x1169.png" media="(min-width:800px)">
+                    <img src="bilder/produktside-150x178.png" alt="produktbilde">
+                </picture>
+                <picture id="hovedbilde">
+                    <source srcset="bilder/produktside-997x1737.png" media="(min-width:800px)">
+                    <img src="bilder/produktside-150x261.png" alt="produktbilde">
+                </picture>
+            </section>
+
+            <section id="produktinformasjon">             
+                <header>
+                    <h1>Produktnavn</h1>
+                    <h3 id="merkenavn"><a href="#">MERKENAVN</a></h3>    <!-- Fiks lenke, ikke #-->
+                </header> 
+                <ul>
+                    <li><p>5 195 kr inkl. mva.</p></li>
+                    <li><p>Farge: <span>Beige</span></p></li>
+                </ul>
+
+                <!-- Nedtrekksmeny (valg av strl). Hentet fra forelesning uke44, 01.11  -->
+                <section>
+                    <form id="handlevalg">
+                        <label for="size"></label>
+                        <select name="size" id="size">
+                            <option value="Velg størrelse">Velg størrelse</option>
+                            <option value="XS">XS</option>      <!-- Sjekk om det er "lovlige" values-->
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                        <article>
+                            <button id="handlekurv">Legg til i handlekurv</button>
+                            <button id="favoritt"><i class="fa-regular fa-heart fa-lg"></i></button>
+                        </article>
+                    </form>
+                </section>
+                
+                <section id="detaljer">
+                    <details>
+                        <summary>Materiale og vedlikehold<i class="fa-regular fa-plus"></i></summary>
+                        <ul>
+                            <li>
+                                <p>Overmateriale: 95% viskose, 5% elastan</p>
+                            </li>
+                            <li>
+                                <p>Materiale ermer: 100% polyester</p>
+                            </li>
+                            <li>
+                                <p>Materiale: Jersey</p>
+                            </li>
+                        </ul>
+                    </details>
+                
+                    <details>
+                        <summary>Produktdetaljer<i class="fa-regular fa-plus"></i></summary>
+                        <p class="produktdetaljer">Maecenas rhoncus scelerisque ex vel placerat. Proin quis tellus turpis. Pellentesque eget dolor ornare, blandit ligula vitae, fringilla quam. Maecenas lectus massa, eleifend ac elit ut, eleifend sollicitudin justo. Sed tempus eget metus vitae pulvinar. Nam molestie massa vitae euismod vulputate.</p>
+                    </details>
+
+                    <details>
+                    <summary>Størrelsestabell<i class="fa-regular fa-plus"></i></summary>
+                        <p class="produktdetaljer">
+                            Sjekk hvordan din vanlige størrelse konverterer til andre
+                            størrelser i vår størrelsesguide. Husk at dette er en
+                            generell guide og at størrelsene kan variere i forhold til
+                            merke og modell.
+                        </p>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>EU</th>
+                                    <th>INT</th>
+                                    <th>BRYSTVIDDE</th>
+                                    <th>LIVVIDDE</th>
+                                    <th>HOFTEMÅL</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>32</td>
+                                    <td>XXS</td>
+                                    <td>76</td>
+                                    <td>63</td>
+                                    <td>85</td>
+                                </tr>
+                                <tr>
+                                    <td>34</td>
+                                    <td>XS</td>
+                                    <td>80</td>
+                                    <td>66</td>
+                                    <td>89</td>
+                                </tr>
+                                <tr>
+                                    <td>36</td>
+                                    <td>S</td>
+                                    <td>84</td>
+                                    <td>69</td>
+                                    <td>93</td>
+                                </tr>
+                                <tr>
+                                    <td>38</td>
+                                    <td>M</td>
+                                    <td>88</td>
+                                    <td>72</td>
+                                    <td>97</td>
+                                </tr>
+                                <tr>
+                                    <td>40</td>
+                                    <td>L</td>
+                                    <td>92</td>
+                                    <td>76</td>
+                                    <td>100</td>
+                                </tr>
+                                <tr>
+                                    <td>42</td>
+                                    <td>XL</td>
+                                    <td>96</td>
+                                    <td>80</td>
+                                    <td>103</td>
+                                </tr>
+                                <tr>
+                                    <td>44</td>
+                                    <td>XXL</td>
+                                    <td>100</td>
+                                    <td>85</td>
+                                    <td>106</td>
+                                </tr>
+                                <tr>
+                                    <td>46</td>
+                                    <td>3XL</td>
+                                    <td>104</td>
+                                    <td>90</td>
+                                    <td>109</td>
+                                </tr>
+                                <tr>
+                                    <td>48</td>
+                                    <td>4XL</td>
+                                    <td>110</td>
+                                    <td>96.5</td>
+                                    <td>114</td>
+                                </tr>
+                                <tr>
+                                    <td>50</td>
+                                    <td>5XL</td>
+                                    <td>116</td>
+                                    <td>103</td>
+                                    <td>119</td>
+                                </tr>
+                                <tr>
+                                    <td>52</td>
+                                    <td>6XL</td>
+                                    <td>122</td>
+                                    <td>109.5</td>
+                                    <td>124</td>
+                                </tr>
+                                <tr>
+                                    <td>54</td>
+                                    <td>7XL</td>
+                                    <td>128</td>
+                                    <td>116</td>
+                                    <td>130</td>
+                                </tr>
+                                <tr>
+                                    <td>56</td>
+                                    <td>8XL</td>
+                                    <td>134</td>
+                                    <td>122.5</td>
+                                    <td>136</td>
+                                </tr>
+                                <tr>
+                                    <td>58</td>
+                                    <td>9XL</td>
+                                    <td>140</td>
+                                    <td>129</td>
+                                    <td>142</td>
+                                </tr>
+                                <tr>
+                                    <td>60</td>
+                                    <td>10XL</td>
+                                    <td>146</td>
+                                    <td>135.5</td>
+                                    <td>148</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </details>
+
+                <!-- Anmeldelser -->
+                    <details>
+                        <summary>
+                            Anmeldelser
+                            <span>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                32
+                            </span>
+                        </summary>
+                        <article id="produkt-anmelder">
+                            <p>Mari Coon</p>
+                            <p>2024-10-02</p> <!-- Egen tag for tid? -->
+                            <ol>
+                                <li>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </li>
+                            </ol>
+                            <p>Duis risus sapien, sagittis non sapien condimentum, lacinia fermentum neque. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                        </article>
+                    </details>
+                </section>
+            </section>
+        </main>
+        <aside>
+            <header>
+                <!-- Relaterte/Lignende produkter-->
+                <h3>Lignende produkter</h3>
+                <a href="#">Se flere lignende produkter<i class="fa-solid fa-arrow-right"></i></a>
+            </header>
+            <!-- Produktkort -->
+            <section class="scroll-container">
+                <article class="relaterte-produkter">
+                    <picture>
+                        <!-- <source> for mediaqueries må huskes!-->
+                        <img src="bilder/relaterte-250x250.png" alt="Lignende produkter"> <!-- Finn bedre alt, evt størrelse også. -->
+                    </picture>
+                    <i class="fa-regular fa-heart favoritt"></i>
+
+                    <a href="product.html">Product name</a>     <!-- Riktig lenking? -->
+
+                                                    <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
+                    <p>Kr 1900,-</p>
+
+                    <ol>                             <!-- !! microdata !! -->
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-regular fa-star"></i></li>
+                        <li>842 Reviews</li> <!-- !! microdata !! -->
+                    </ol>    
+                </article>
+                <article class="relaterte-produkter">
+                    <picture>
+                        <!-- <source> for mediaqueries må huskes!-->
+                        <img src="bilder/relaterte-250x250.png" alt="Lignende produkter"> <!-- Finn bedre alt, evt størrelse også. -->
+                    </picture>
+                    <i class="fa-regular fa-heart favoritt"></i>
+
+                    <a href="product.html">Product name</a>     <!-- Riktig lenking? -->
+
+                                                    <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
+                    <p>Kr 1900,-</p>
+
+                    <ol>                             <!-- !! microdata !! -->
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-regular fa-star"></i></li>
+                        <li>842 Reviews</li> <!-- !! microdata !! -->
+                    </ol>    
+                </article>
+                <article class="relaterte-produkter">
+                    <picture>
+                        <!-- <source> for mediaqueries må huskes!-->
+                        <img src="bilder/relaterte-250x250.png" alt="Lignende produkter"> <!-- Finn bedre alt, evt størrelse også. -->
+                    </picture>
+                    <i class="fa-regular fa-heart favoritt"></i>
+
+                    <a href="product.html">Product name</a>     <!-- Riktig lenking? -->
+
+                                                    <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
+                    <p>Kr 1900,-</p>
+
+                    <ol>                             <!-- !! microdata !! -->
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-regular fa-star"></i></li>
+                        <li>842 Reviews</li> <!-- !! microdata !! -->
+                    </ol>    
+                </article>
+                <article class="relaterte-produkter">
+                    <picture>
+                        <!-- <source> for mediaqueries må huskes!-->
+                        <img src="bilder/relaterte-250x250.png" alt="Lignende produkter"> <!-- Finn bedre alt, evt størrelse også. -->
+                    </picture>
+                    <i class="fa-regular fa-heart favoritt"></i>
+
+                    <a href="product.html">Product name</a>     <!-- Riktig lenking? -->
+
+                                                    <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
+                    <p>Kr 1900,-</p>
+
+                    <ol>                             <!-- !! microdata !! -->
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-regular fa-star"></i></li>
+                        <li>842 Reviews</li> <!-- !! microdata !! -->
+                    </ol>    
+                </article>
+                <article class="relaterte-produkter">
+                    <picture>
+                        <!-- <source> for mediaqueries må huskes!-->
+                        <img src="bilder/relaterte-250x250.png" alt="Lignende produkter"> <!-- Finn bedre alt, evt størrelse også. -->
+                    </picture>
+                    <i class="fa-regular fa-heart favoritt"></i>
+
+                    <a href="product.html">Product name</a>     <!-- Riktig lenking? -->
+
+                                                    <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
+                    <p>Kr 1900,-</p>
+
+                    <ol>                             <!-- !! microdata !! -->
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-solid fa-star"></i></li>
+                        <li><i class="fa-regular fa-star"></i></li>
+                        <li>842 Reviews</li> <!-- !! microdata !! -->
+                    </ol>    
+                </article>
+            </section>
+        </aside>
+        
+        <footer id="global-footer">   
+            <section id="footer-ingress">
+                <img src="bilder/logo1c1c1c.png" alt="Bedriftens logo" width="65">   <!-- bedre alt -->
+                <p>
+                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis. 
+                </p>
+            </section>
+            <section id="footer-kontakt">
+                <h4 id="kontaktOss">KONTAKT</h4>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i><span>Adresse:</span>B R A Veien 4, 1757 Halden</li> <!-- Er det en egen href for adresse?-->
+                    <li><i class="fa-solid fa-phone"></i><span>Telefon:</span><a href="tel:+469608000">(+47) 69 60 80 00</a></li>
+                    <li><i class="fa-solid fa-envelope"></i><span>E-post:</span> <a href="mailto:halden@hiof.no">halden@hiof.no</a></li>
+                    <li><i class="fa-solid fa-clock"></i><p><span>Åpningstider:</span> Stenger 15:00</p></li>
+                </ul>
+            </section>
+            <section>
+                <nav id="footer-snarveier">
+                    <h4>SNARVEIER</h4>
+                    <ul>
+                        <li><a href="index.html#populaereProdukter">Produkter</a></li>
+                        <li><a href="index.html#populaereKategorier">Kategorier</a></li>
+                        <li><a href="#kontaktOss">Kontakt oss</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <section id="footer-sosialemedier">
+                <h4>SOSIALE MEDIER</h4>
+                <ul>
+                    <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-lg"></i></a></li>
+                    <li><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook fa-lg"></i></a></li>
+                    <li><a href="https://no.linkedin.com/"><i class="fa-brands fa-linkedin fa-lg"></i></a></li>
+                    <li><a href="https://no.pinterest.com/"><i class="fa-brands fa-pinterest fa-lg"></i></a></li>
+                </ul>
+            </section>
+            <a href="#toppen" id="hopp-til-toppen">Hopp til toppen</a>
+        </footer>
+    </div>
 </body> 
 </html>
