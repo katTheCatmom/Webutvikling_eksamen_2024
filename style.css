@@ -166,6 +166,8 @@ body {
             flex-wrap: wrap;
             align-items: center;
             width: 100%;
+            padding: 3rem 0;
+
             
             h2 {
                 text-align: center;
@@ -204,7 +206,7 @@ body {
                 background-color: none;
             }
 
-            #active-filter-btn {
+            .active-filter-btn {
                 background-color: #292929;
                 color: #ffffff;
             }
@@ -1090,6 +1092,7 @@ aside {
         }
     }
     
+    /* SLIDER FORSIDE */
     #headerForside {
         display: none;
     }
@@ -1100,14 +1103,13 @@ aside {
         gap: 1rem;
         border-radius: 30px;
         margin: 0.5rem;
-        
-        .fa-arrow-right {
-            position: absolute;
-            top: 18rem;
-            right: 2rem;
-            padding: 1rem;
-            z-index: 2;
 
+        .fa-arrow-right {
+            position: sticky;
+            top: 11rem;
+            left: 72rem;
+            z-index: 1;
+            height: fit-content;
             font-size: large;
             background-color: rgba(255, 255, 255, 0.5);
             backdrop-filter: blur(10px);
@@ -1115,12 +1117,11 @@ aside {
         }
 
         .fa-arrow-left {
-            position: absolute;
-            top: 18rem;
-            left: 2rem;
-            padding: 0.8rem;
-            z-index: 2;
-
+            position: sticky;
+            top: 11rem;
+            left: 5rem;
+            z-index: 1;
+            height: fit-content;
             font-size: large;
             background-color: rgba(255, 253, 253, 0.5);
             backdrop-filter: blur(10px);
@@ -1133,10 +1134,8 @@ aside {
             flex-wrap: wrap;
             text-align: right;
             gap: 1rem;
-            max-height: 40rem;
-            justify-content: space-between;
             align-items: flex-end;
-            
+            max-height: 40rem;
             width: 55rem;
             position: relative;
 
@@ -1210,5 +1209,31 @@ aside {
         }
     }
 
+    #produkter {
+
+        /*Vil ikke utføre CSS-en uten bruk av !important*/
+        .filter-btn:hover, .active-filter-btn:hover {
+            color: #ffffff !important;      
+            background-color: #b5b5b5 !important;
+        }
+
+        #produkt-samling {
+            flex-direction: row !important;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0.5rem;
+            
+            .product-card {
+                width: 31%;
+                padding: 0;
+                
+                .product-heart {
+                    top: 1rem;
+                    right: 1rem;
+                }
+            }
+        }
+    }
      
+
 }

@@ -57,7 +57,7 @@
             <section id="sliderForside">
                 <i class="fa-solid fa-arrow-left"></i>
                 <i class="fa-solid fa-arrow-right"></i>
-                <article>
+                <article id="slider-en">
                     <h2>Et harum quidem rerum facilis est et expedita distinctio.</h2>
                     <p>Nam liberto tempore, cum soluta nobis est eligendi optio cumque
                         nihil impedit quo minus id quod maxime placeat facere pssoimus
@@ -92,7 +92,7 @@
                     <!-- !!! Statiske knapper for filtrering !!!-->
                     <ul>
                         <li> <!-- Velger å bruke <a> her, fordi de skal være statiske. De linker til produkter. Gir også den 'hånda' når man :hover-->
-                            <a href="#populaereProdukter" id="active-filter-btn" class="filter-btn">New Product</a>
+                            <a href="#populaereProdukter" class="filter-btn active-filter-btn">New Product</a>
                         </li>
                         <li>
                             <a href="#populaereProdukter" class="filter-btn">Special Price</a>
@@ -107,132 +107,128 @@
                 <!-- section i section: https://stackoverflow.com/questions/9916354/is-it-valid-to-have-a-section-tag-inside-another-section-tag -->
                 <section id="produkt-samling">
                     <article class="product-card">
-                        <!-- Bilde -->
                         <picture>
-                            <!-- <source> for mediaqueries må huskes!-->
+                            <source srcset="bilder/produktkort-desktop.png" media="(min-width:800px)">
                             <img src="bilder/produktkort-mobil.png" alt="produktkort"> <!-- Finn bedre alt, evt størrelse også. -->
                         </picture>
                         <i class="fa-regular fa-heart product-heart fa-lg"></i>
-                        <!-- Produktnavn -->
                         <a href="product.html">Product name</a>
-
-                        <!-- Pris -->                                   <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
+                                  <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
                         <p class="price">Kr 1900,-</p>
 
-                        <ul class="reviews">
-                            <!-- Stjerner -->                               <!-- !! microdata !! -->
+                        <ul class="reviews">                               <!-- !! microdata !! -->
                             <li>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-regular fa-star"></i>
-                            </li>
-                            <!-- Liten tekst om antall anmeldelser -->      <!-- !! microdata !! -->
+                            </li>     <!-- !! microdata !! -->
                             <li><p>842 Reviews</p></li>
                         </ul>
                     </article>
                     <article class="product-card">
-                        <!-- Bilde -->
                         <picture>
-                            <!-- <source> for mediaqueries må huskes!-->
+                            <source srcset="bilder/produktkort-desktop.png" media="(min-width:800px)">
                             <img src="bilder/produktkort-mobil.png" alt="produktkort"> <!-- Finn bedre alt, evt størrelse også. -->
                         </picture>
                         <i class="fa-regular fa-heart product-heart fa-lg"></i>
-                        <!-- Produktnavn -->
                         <a href="product.html">Product name</a>
-
-                        <!-- Pris -->                                   <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
+                                  <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
                         <p class="price">Kr 1900,-</p>
 
-                        <ul class="reviews">
-                            <!-- Stjerner -->                               <!-- !! microdata !! -->
+                        <ul class="reviews">                               <!-- !! microdata !! -->
                             <li>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-regular fa-star"></i>
-                            </li>
-                            <!-- Liten tekst om antall anmeldelser -->      <!-- !! microdata !! -->
+                            </li>     <!-- !! microdata !! -->
                             <li><p>842 Reviews</p></li>
                         </ul>
                     </article>
                     <article class="product-card">
-                        <!-- Bilde -->
                         <picture>
-                            <!-- <source> for mediaqueries må huskes!-->
+                            <source srcset="bilder/produktkort-desktop.png" media="(min-width:800px)">
                             <img src="bilder/produktkort-mobil.png" alt="produktkort"> <!-- Finn bedre alt, evt størrelse også. -->
                         </picture>
                         <i class="fa-regular fa-heart product-heart fa-lg"></i>
-                        <!-- Produktnavn -->
                         <a href="product.html">Product name</a>
-
-                        <!-- Pris -->                                   <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
+                                  <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
                         <p class="price">Kr 1900,-</p>
 
-                        <ul class="reviews">
-                            <!-- Stjerner -->                               <!-- !! microdata !! -->
+                        <ul class="reviews">                               <!-- !! microdata !! -->
                             <li>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-regular fa-star"></i>
-                            </li>
-                            <!-- Liten tekst om antall anmeldelser -->      <!-- !! microdata !! -->
+                            </li>     <!-- !! microdata !! -->
                             <li><p>842 Reviews</p></li>
                         </ul>
                     </article>
                     <article class="product-card">
-                        <!-- Bilde -->
                         <picture>
-                            <!-- <source> for mediaqueries må huskes!-->
+                            <source srcset="bilder/produktkort-desktop.png" media="(min-width:800px)">
                             <img src="bilder/produktkort-mobil.png" alt="produktkort"> <!-- Finn bedre alt, evt størrelse også. -->
                         </picture>
                         <i class="fa-regular fa-heart product-heart fa-lg"></i>
-                        <!-- Produktnavn -->
                         <a href="product.html">Product name</a>
-
-                        <!-- Pris -->                                   <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
+                                  <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
                         <p class="price">Kr 1900,-</p>
 
-                        <ul class="reviews">
-                            <!-- Stjerner -->                               <!-- !! microdata !! -->
+                        <ul class="reviews">                               <!-- !! microdata !! -->
                             <li>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-regular fa-star"></i>
-                            </li>
-                            <!-- Liten tekst om antall anmeldelser -->      <!-- !! microdata !! -->
+                            </li>     <!-- !! microdata !! -->
                             <li><p>842 Reviews</p></li>
                         </ul>
                     </article>
                     <article class="product-card">
-                        <!-- Bilde -->
                         <picture>
-                            <!-- <source> for mediaqueries må huskes!-->
+                            <source srcset="bilder/produktkort-desktop.png" media="(min-width:800px)">
                             <img src="bilder/produktkort-mobil.png" alt="produktkort"> <!-- Finn bedre alt, evt størrelse også. -->
                         </picture>
                         <i class="fa-regular fa-heart product-heart fa-lg"></i>
-                        <!-- Produktnavn -->
                         <a href="product.html">Product name</a>
-
-                        <!-- Pris -->                                   <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
+                                  <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
                         <p class="price">Kr 1900,-</p>
 
-                        <ul class="reviews">
-                            <!-- Stjerner -->                               <!-- !! microdata !! -->
+                        <ul class="reviews">                               <!-- !! microdata !! -->
                             <li>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-regular fa-star"></i>
-                            </li>
-                            <!-- Liten tekst om antall anmeldelser -->      <!-- !! microdata !! -->
+                            </li>     <!-- !! microdata !! -->
+                            <li><p>842 Reviews</p></li>
+                        </ul>
+                    </article>
+                    <article class="product-card">
+                        <picture>
+                            <source srcset="bilder/produktkort-desktop.png" media="(min-width:800px)">
+                            <img src="bilder/produktkort-mobil.png" alt="produktkort"> <!-- Finn bedre alt, evt størrelse også. -->
+                        </picture>
+                        <i class="fa-regular fa-heart product-heart fa-lg"></i>
+                        <a href="product.html">Product name</a>
+                                  <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
+                        <p class="price">Kr 1900,-</p>
+
+                        <ul class="reviews">                               <!-- !! microdata !! -->
+                            <li>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </li>     <!-- !! microdata !! -->
                             <li><p>842 Reviews</p></li>
                         </ul>
                     </article>
