@@ -16,7 +16,7 @@
     <nav class="skip-to-content">
         <ul>
             <li>
-                <a href="#produkter">Hopp til hovedinnhold</a>
+                <a href="#shoppingbag">Hopp til hovedinnhold</a>
             </li>
             <li>
                 <a href="#search">Hopp til søkefelt</a>
@@ -32,12 +32,12 @@
                 </label>
             </form>
             <nav>
-                <ul>        <!-- ENDRE LINKIN TIL RIKTIG KLASSE -->
+                <ul>       
                     <li><a href="index.html">Hjem</a></li>
                     <li><a href="index.html#produkter">Produkter</a></li>
                     <li class="logo">
                         <a href="index.html">
-                            <img src="bilder/logo1c1c1c.png" width="100" alt="Nettsidens logo"> <!-- Bedre alt? -->
+                            <img src="bilder/logo1c1c1c.png" width="100" alt="Nettsidens logo">
                         </a>
                     </li>
                     <li><a href="index.html#kategorier">Kategorier</a></li>
@@ -45,13 +45,13 @@
                 </ul>
             </nav>
             <ul id="header-ikonmeny">
-                <li><i class="fa-regular fa-user"></i></li> <!-- User icon-->
-                <li><i class="fa-regular fa-heart"></i></li> <!-- Heart icon -->
+                <li><i class="fa-regular fa-user"></i></li> 
+                <li><i class="fa-regular fa-heart"></i></li>
                 <li><a href="checkout.html" aria-label="handlevogn"><i class="fa-solid fa-cart-shopping"></i></a></li> <!-- UU tiltak gjort, basert på wave.webaim.org sin analyse (aria-label)-->
             </ul>
         </header>
         <main id="kasse">
-            <a href="index.html#kategorier" id="handle-mer"><i class="fa-solid fa-arrow-left"></i> Fortsett å handle</a> <!-- Finn riktig lenking -->
+            <a href="index.html#kategorier" id="handle-mer"><i class="fa-solid fa-arrow-left"></i> Fortsett å handle</a>
             
             <h1>Kasse</h1>
             
@@ -59,9 +59,7 @@
                 <h2>1. SHOPPINGBAGEN DIN</h2>
                 <section class="handlevogn-vare">
                     <article class="produktinfo">
-                        <picture>
-                            <img src="bilder/checkout-150x261.png" alt="varebilde">
-                        </picture>
+                        <img src="bilder/checkout-150x261.png" alt="varebilde">
                         <article>
                             <p class="produktnavn">PRODUCT NAME</p>
                             <p>Kr 1999</p>
@@ -75,7 +73,6 @@
                                         <option value="L">L</option>
                                         <option value="XL">XL</option>
                                     </select>
-                                    <!-- "Legg til i handlekurv" knapp-->
                                     <label for="quantity-en" aria-label="Antall av varen i handlevognen">Antall</label> <!-- UU tiltak gjort, basert på wave.webaim.org sin analyse (aria-label)-->
                                     <input type="number" id="quantity-en" min="1">
                                 </article> 
@@ -89,9 +86,7 @@
 
                 <section class="handlevogn-vare">
                     <article class="produktinfo">
-                        <picture>
-                            <img src="bilder/checkout-150x261.png" alt="varebilde">
-                        </picture>
+                        <img src="bilder/checkout-150x261.png" alt="varebilde">
                         <article>
                             <p class="produktnavn">PRODUCT NAME</p>
                             <p>Kr 1999</p>
@@ -99,13 +94,12 @@
                             <article class="storrelse-og-antall"> <!-- UU tiltak gjort, basert på wave.webaim.org sin analyse. Grunnet to <label>, endret fra <form> til <article>-->
                                 <label for="size-to" aria-label="Sjekk størrelse for varen i handlevognen">Størrelse</label> <!-- UU tiltak gjort, basert på wave.webaim.org sin analyse (aria-label)-->
                                 <select name="size" id="size-to">
-                                    <option value="XS">XS</option>      <!-- Sjekk om det er "lovlige" values-->
+                                    <option value="XS">XS</option>   
                                     <option value="S">S</option>
                                     <option value="M">M</option>
                                     <option value="L">L</option>
                                     <option value="XL">XL</option>
                                 </select>
-                                <!-- "Legg til i handlekurv" knapp-->
                                 <label for="quantity-to" aria-label="Antall av varen i handlevognen">Antall</label> <!-- UU tiltak gjort, basert på wave.webaim.org sin analyse (aria-label)-->
                                 <input type="number" id="quantity-to" min="1"> 
                             </article>
@@ -119,9 +113,7 @@
 
                 <section class="handlevogn-vare">
                     <article class="produktinfo">
-                        <picture>
-                            <img src="bilder/checkout-150x261.png" alt="varebilde">
-                        </picture>
+                        <img src="bilder/checkout-150x261.png" alt="varebilde">
                         <article>
                             <p class="produktnavn">PRODUCT NAME</p>
                             <p>Kr 1999</p>
@@ -129,13 +121,12 @@
                             <article class="storrelse-og-antall"> <!-- UU tiltak gjort, basert på wave.webaim.org sin analyse. Grunnet to <label>, endret fra <form> til <article>-->
                                 <label for="size-tre" aria-label="Sjekk størrelse for varen i handlevognen"></label> <!-- UU tiltak gjort, basert på wave.webaim.org sin analyse (aria-label)-->
                                 <select name="size" id="size-tre">
-                                    <option value="XS">XS</option>      <!-- Sjekk om det er "lovlige" values-->
+                                    <option value="XS">XS</option> 
                                     <option value="S">S</option>
                                     <option value="M">M</option>
                                     <option value="L">L</option>
                                     <option value="XL">XL</option>
                                 </select>
-                                <!-- "Legg til i handlekurv" knapp-->
                                 <label for="quantity-tre" aria-label="Antall av varen i handlevognen">Antall</label> <!-- UU tiltak gjort, basert på wave.webaim.org sin analyse (aria-label)-->
                                 <input type="number" id="quantity-tre" min="1"> 
                             </article>
@@ -151,7 +142,7 @@
             <section id="dine-opplysninger">
                 <h2>2. DINE OPPLYSNINGER</h2>
                 
-                <form method="get">  <!-- Method -> Referanse i notepad --> <!-- Legge inn action="" ?-->
+                <form method="get">
                     <h3>Leveringsadresse</h3>
                     
                     <label for="fornavn">
@@ -199,7 +190,6 @@
                 
             </section>
 
-            <!-- Seksjon 3 - Levering -->
             <section id="levering">
                 <h2>3. LEVERING</h2>
                 <form>
@@ -234,7 +224,6 @@
                 </form>
             </section>
 
-            <!-- Seksjon 4 - Kortinformasjon + samtykke -->
             <section id="betaling">
                 <h2>4. BETALING</h2>
                 <form>
@@ -269,7 +258,7 @@
             
             <footer id="global-footer">   
                 <section id="footer-ingress" itemscope itemtype="https://schema.org/Organization">
-                    <img src="bilder/logo1c1c1c.png" alt="Bedriftens logo" width="65" itemprop="logo">   <!-- bedre alt -->
+                    <img src="bilder/logo1c1c1c.png" alt="Bedriftens logo" width="65" itemprop="Bedriftens logo">   
                     <p itemprop="slogan">
                         At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis. 
                     </p>
@@ -277,7 +266,7 @@
                 <section id="footer-kontakt" itemscope itemtype="https://schema.org/Organization">
                     <h4 id="kontaktOss">KONTAKT</h4>
                     <ul itemprop="contactPoint" itemscope itemtype="https://schema.org/PostalAddress">
-                        <li itemprop="streetAddress"><i class="fa-solid fa-location-dot"></i><span>Adresse:</span>B R A Veien 4, 1757 Halden</li> <!-- Er det en egen href for adresse?-->
+                        <li itemprop="streetAddress"><i class="fa-solid fa-location-dot"></i><span>Adresse:</span>B R A Veien 4, 1757 Halden</li>
                         <li itemprop="telephone"><i class="fa-solid fa-phone"></i><span>Telefon:</span><a href="tel:+469608000">(+47) 69 60 80 00</a></li>
                         <li itemprop="email"><i class="fa-solid fa-envelope"></i><span>E-post:</span> <a href="mailto:halden@hiof.no">halden@hiof.no</a></li>
                         <li><i class="fa-solid fa-clock"></i><p><span>Åpningstider:</span> Stenger 15:00</p></li>
@@ -296,10 +285,10 @@
                 <section id="footer-sosialemedier">
                     <h4>SOSIALE MEDIER</h4>
                     <ul>
-                        <li><a href="https://www.instagram.com/" target="_blank" aria-label="Link til vår instagramside"><i class="fa-brands fa-instagram fa-lg"></i></a></li>
-                        <li><a href="https://www.facebook.com/" target="_blank" aria-label="Link til vår facebookside"><i class="fa-brands fa-facebook fa-lg"></i></a></li>
-                        <li><a href="https://no.linkedin.com/" target="_blank" aria-label="Link til vår linkedinside"><i class="fa-brands fa-linkedin fa-lg"></i></a></li>
-                        <li><a href="https://no.pinterest.com/" target="_blank" aria-label="Link til vår pinterestside"><i class="fa-brands fa-pinterest fa-lg"></i></a></li>
+                        <li><a href="https://www.instagram.com/" target="_blank" aria-label="Link til vår instagramside"><i class="fa-brands fa-instagram fa-lg"></i></a></li> <!-- UU tiltak gjort, basert på wave.webaim.org sin analyse (aria-label)-->
+                        <li><a href="https://www.facebook.com/" target="_blank" aria-label="Link til vår facebookside"><i class="fa-brands fa-facebook fa-lg"></i></a></li> <!-- UU tiltak gjort, basert på wave.webaim.org sin analyse (aria-label)-->
+                        <li><a href="https://no.linkedin.com/" target="_blank" aria-label="Link til vår linkedinside"><i class="fa-brands fa-linkedin fa-lg"></i></a></li> <!-- UU tiltak gjort, basert på wave.webaim.org sin analyse (aria-label)-->
+                        <li><a href="https://no.pinterest.com/" target="_blank" aria-label="Link til vår pinterestside"><i class="fa-brands fa-pinterest fa-lg"></i></a></li> <!-- UU tiltak gjort, basert på wave.webaim.org sin analyse (aria-label)-->
                     </ul>
                 </section>
             </footer>

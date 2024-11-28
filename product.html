@@ -21,7 +21,7 @@
     <nav class="skip-to-content">
         <ul>
             <li>
-                <a href="#produkter">Hopp til hovedinnhold</a>
+                <a href="#produktside">Hopp til hovedinnhold</a>
             </li>
             <li>
                 <a href="#search">Hopp til søkefelt</a>
@@ -37,12 +37,12 @@
                 </label>
             </form>
             <nav>
-                <ul>        <!-- ENDRE LINKIN TIL RIKTIG KLASSE -->
+                <ul>        
                     <li><a href="index.html">Hjem</a></li>
                     <li><a href="index.html#produkter">Produkter</a></li>
                     <li class="logo">
                         <a href="index.html">
-                            <img src="bilder/logo1c1c1c.png" width="100" alt="Nettsidens logo"> <!-- Bedre alt? -->
+                            <img src="bilder/logo1c1c1c.png" width="100" alt="Nettsidens logo">
                         </a>
                     </li>
                     <li><a href="index.html#kategorier">Kategorier</a></li>
@@ -50,8 +50,8 @@
                 </ul>
             </nav>
             <ul id="header-ikonmeny">
-                <li><i class="fa-regular fa-user"></i></li> <!-- User icon-->
-                <li><i class="fa-regular fa-heart"></i></li> <!-- Heart icon -->
+                <li><i class="fa-regular fa-user"></i></li> 
+                <li><i class="fa-regular fa-heart"></i></li>
                 <li><a href="checkout.html" aria-label="handlevogn"><i class="fa-solid fa-cart-shopping"></i></a></li> <!-- UU tiltak gjort, basert på wave.webaim.org sin analyse (aria-label)-->
             </ul>
         </header>
@@ -96,7 +96,7 @@
                 </picture>
                 <picture id="hovedbilde">
                     <source srcset="bilder/produktside-997x1737.png" media="(min-width:800px)">
-                    <img src="bilder/produktside-150x261.png" alt="Fullskala bilde av den beige kjole" itemprop="image">
+                    <img src="bilder/produktside-150x261.png" alt="Fullskala bilde av den beige kjolen" itemprop="image">
                 </picture>
             </section>
 
@@ -280,7 +280,7 @@
                         </table>
                     </details>
 
-                <!-- Anmeldelser -->
+                
                     <details>
                         <summary>
                             Anmeldelser
@@ -314,127 +314,110 @@
                 </section>
             </section>
         </main>
+
         <aside id="lignende-produkter">
             <header>
-                <!-- Relaterte/Lignende produkter-->
                 <h3>Lignende produkter</h3>
                 <a href="index.html#produkter">Se flere lignende produkter<i class="fa-solid fa-arrow-right"></i></a>
             </header>
-            <!-- Produktkort -->
+           
             <section class="scroll-container" itemscope itemtype="https://schema.org/Product">
                 <article class="relaterte-produkter" itemprop="isRelatedTo">
-                    <picture>
-                        <!-- <source> for mediaqueries må huskes!-->
-                        <img src="bilder/relaterte-250x250.png" alt="Beige maxi-kjole" itemprop="image"> <!-- Finn bedre alt, evt størrelse også. -->
-                    </picture>
+                    <img src="bilder/relaterte-250x250.png" alt="Beige maxi-kjole" itemprop="image"> 
                     <i class="fa-regular fa-heart favoritt"></i>
 
-                    <a href="product.html"><span itemprop="name">Product name</span></a>     <!-- Riktig lenking? -->
+                    <a href="product.html"><span itemprop="name">Product name</span></a>     
 
-                                                    <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
+                                                   
                     <article itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                         <meta itemprop="priceCurrency" content="NOK">
                         <p itemprop="price" content="1900">Kr 1900,-</p>
                     </article>
-                    <ol>                             <!-- !! microdata !! -->
+                    <ol>                            
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-regular fa-star"></i></li>
-                        <li>842 Reviews</li> <!-- !! microdata !! -->
+                        <li>842 Reviews</li> 
                     </ol>    
                 </article>
                 <article class="relaterte-produkter" itemprop="isRelatedTo">
-                    <picture>
-                        <!-- <source> for mediaqueries må huskes!-->
-                        <img src="bilder/relaterte-250x250.png" alt="Beige maxi-kjole" itemprop="image"> <!-- Finn bedre alt, evt størrelse også. -->
-                    </picture>
+                    <img src="bilder/relaterte-250x250.png" alt="Beige maxi-kjole" itemprop="image"> 
                     <i class="fa-regular fa-heart favoritt"></i>
 
-                    <a href="product.html"><span itemprop="name">Product name</span></a>     <!-- Riktig lenking? -->
+                    <a href="product.html"><span itemprop="name">Product name</span></a> 
 
-                                                    <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
+                                                  
                     <article itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                         <meta itemprop="priceCurrency" content="NOK">
                         <p itemprop="price" content="1900">Kr 1900,-</p>
                     </article>
-                    <ol>                             <!-- !! microdata !! -->
+                    <ol>                             
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-regular fa-star"></i></li>
-                        <li>842 Reviews</li> <!-- !! microdata !! -->
+                        <li>842 Reviews</li>
                     </ol>    
                 </article>
                 <article class="relaterte-produkter" itemprop="isRelatedTo">
-                    <picture>
-                        <!-- <source> for mediaqueries må huskes!-->
-                        <img src="bilder/relaterte-250x250.png" alt="Beige maxi-kjole" itemprop="image"> <!-- Finn bedre alt, evt størrelse også. -->
-                    </picture>
+                    <img src="bilder/relaterte-250x250.png" alt="Beige maxi-kjole" itemprop="image">
                     <i class="fa-regular fa-heart favoritt"></i>
 
-                    <a href="product.html"><span itemprop="name">Product name</span></a>     <!-- Riktig lenking? -->
+                    <a href="product.html"><span itemprop="name">Product name</span></a>    
 
-                                                    <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
+                                                  
                     <article itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                         <meta itemprop="priceCurrency" content="NOK">
                         <p itemprop="price" content="1900">Kr 1900,-</p>
                     </article>
-                    <ol>                             <!-- !! microdata !! -->
+                    <ol>                          
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-regular fa-star"></i></li>
-                        <li>842 Reviews</li> <!-- !! microdata !! -->
+                        <li>842 Reviews</li>
                     </ol>    
                 </article>
                 <article class="relaterte-produkter" itemprop="isRelatedTo">
-                    <picture>
-                        <!-- <source> for mediaqueries må huskes!-->
-                        <img src="bilder/relaterte-250x250.png" alt="Beige maxi-kjole" itemprop="image"> <!-- Finn bedre alt, evt størrelse også. -->
-                    </picture>
+                    <img src="bilder/relaterte-250x250.png" alt="Beige maxi-kjole" itemprop="image">
                     <i class="fa-regular fa-heart favoritt"></i>
 
-                    <a href="product.html"><span itemprop="name">Product name</span></a>     <!-- Riktig lenking? -->
+                    <a href="product.html"><span itemprop="name">Product name</span></a>  
 
-                                                    <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
                     <article itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                         <meta itemprop="priceCurrency" content="NOK">
                         <p itemprop="price" content="1900">Kr 1900,-</p>
                     </article>
-                    <ol>                             <!-- !! microdata !! -->
+                    <ol>                            
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-regular fa-star"></i></li>
-                        <li>842 Reviews</li> <!-- !! microdata !! -->
+                        <li>842 Reviews</li> 
                     </ol>    
                 </article>
                 <article class="relaterte-produkter" itemprop="isRelatedTo">
-                    <picture>
-                        <!-- <source> for mediaqueries må huskes!-->
-                        <img src="bilder/relaterte-250x250.png" alt="Beige maxi-kjole" itemprop="image"> <!-- Finn bedre alt, evt størrelse også. -->
-                    </picture>
+                    <img src="bilder/relaterte-250x250.png" alt="Beige maxi-kjole" itemprop="image">
                     <i class="fa-regular fa-heart favoritt"></i>
 
-                    <a href="product.html"><span itemprop="name">Product name</span></a>     <!-- Riktig lenking? -->
+                    <a href="product.html"><span itemprop="name">Product name</span></a>  
 
-                                                    <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
                     <article itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                         <meta itemprop="priceCurrency" content="NOK">
                         <p itemprop="price" content="1900">Kr 1900,-</p>
                     </article>
-                    <ol>                             <!-- !! microdata !! -->
+                    <ol>                            
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-regular fa-star"></i></li>
-                        <li>842 Reviews</li> <!-- !! microdata !! -->
+                        <li>842 Reviews</li>
                     </ol>    
                 </article>
             </section>

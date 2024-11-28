@@ -175,6 +175,11 @@ body {
                 text-decoration: none;
                 background-color: #ffffff;
                 border-radius: 30px;
+
+                &:hover {
+                    color: #ffffff;
+                    background-color: #000000;
+                }
             }
 
             img {
@@ -399,15 +404,14 @@ body {
                     border-radius: 20px;
                 }
               
-                picture {
+                
+                    
+                img {
                     width: 100%;
                     height: 100%;
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        border-radius: 20px;
-                    }
+                    border-radius: 20px;
                 }
+                
             }
         }
     }
@@ -1297,6 +1301,11 @@ body {
                 font-weight: 500;
                 background-color: #ffffff;
                 border-radius: 30px;
+
+                &:hover {
+                    color: #ffffff;
+                    background-color: #000000;
+                }
             }
 
             img {
@@ -1318,6 +1327,11 @@ body {
                 color: #ffffff;
                 background-color: #1c1c1c;
                 right: 46.5rem;
+
+                &:hover {
+                    color: #000000;
+                    background-color: #ffffff;
+                }
             }
         }  
 
@@ -1498,6 +1512,10 @@ body {
                     }
                 }
             }
+            summary:hover {
+                color: #ffffff;
+                background-color: #1c1c1c;
+            }
         }
     }
     
@@ -1537,7 +1555,11 @@ body {
                     flex-direction: row;
                     gap: 2rem;
                 }
-    
+                
+                select:hover, input:hover {
+                    border: 1.5px solid #1c1c1c;
+                }
+
                 .ikoner {
                     flex-direction: column;
                     i {
