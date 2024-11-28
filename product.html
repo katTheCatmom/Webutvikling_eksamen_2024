@@ -298,7 +298,10 @@
                         <article id="produkt-anmelder" itemprop="review" itemscope itemtype="https://schema.org/Review">
                             <p itemprop="author">Mari Coon</p>
                             <p itemprop="datePublished">2024-10-02</p> <!-- Egen tag for tid? -->
-                            <span itemprop="ratingValue" content="3">
+                            
+                            <span itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating"> 
+                                <meta itemprop="reviewCount" content="1">
+                                <meta itemprop="ratingValue" content="3">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -318,19 +321,21 @@
                 <a href="index.html#produkter">Se flere lignende produkter<i class="fa-solid fa-arrow-right"></i></a>
             </header>
             <!-- Produktkort -->
-            <section class="scroll-container">
-                <article class="relaterte-produkter">
+            <section class="scroll-container" itemscope itemtype="https://schema.org/Product">
+                <article class="relaterte-produkter" itemprop="isRelatedTo">
                     <picture>
                         <!-- <source> for mediaqueries må huskes!-->
-                        <img src="bilder/relaterte-250x250.png" alt="Beige maxi-kjole"> <!-- Finn bedre alt, evt størrelse også. -->
+                        <img src="bilder/relaterte-250x250.png" alt="Beige maxi-kjole" itemprop="image"> <!-- Finn bedre alt, evt størrelse også. -->
                     </picture>
                     <i class="fa-regular fa-heart favoritt"></i>
 
-                    <a href="product.html">Product name</a>     <!-- Riktig lenking? -->
+                    <a href="product.html"><span itemprop="name">Product name</span></a>     <!-- Riktig lenking? -->
 
                                                     <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
-                    <p>Kr 1900,-</p>
-
+                    <article itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                        <meta itemprop="priceCurrency" content="NOK">
+                        <p itemprop="price" content="1900">Kr 1900,-</p>
+                    </article>
                     <ol>                             <!-- !! microdata !! -->
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-solid fa-star"></i></li>
@@ -340,18 +345,20 @@
                         <li>842 Reviews</li> <!-- !! microdata !! -->
                     </ol>    
                 </article>
-                <article class="relaterte-produkter">
+                <article class="relaterte-produkter" itemprop="isRelatedTo">
                     <picture>
                         <!-- <source> for mediaqueries må huskes!-->
-                        <img src="bilder/relaterte-250x250.png" alt="Beige maxi-kjole"> <!-- Finn bedre alt, evt størrelse også. -->
+                        <img src="bilder/relaterte-250x250.png" alt="Beige maxi-kjole" itemprop="image"> <!-- Finn bedre alt, evt størrelse også. -->
                     </picture>
                     <i class="fa-regular fa-heart favoritt"></i>
 
-                    <a href="product.html">Product name</a>     <!-- Riktig lenking? -->
+                    <a href="product.html"><span itemprop="name">Product name</span></a>     <!-- Riktig lenking? -->
 
                                                     <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
-                    <p>Kr 1900,-</p>
-
+                    <article itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                        <meta itemprop="priceCurrency" content="NOK">
+                        <p itemprop="price" content="1900">Kr 1900,-</p>
+                    </article>
                     <ol>                             <!-- !! microdata !! -->
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-solid fa-star"></i></li>
@@ -361,18 +368,20 @@
                         <li>842 Reviews</li> <!-- !! microdata !! -->
                     </ol>    
                 </article>
-                <article class="relaterte-produkter">
+                <article class="relaterte-produkter" itemprop="isRelatedTo">
                     <picture>
                         <!-- <source> for mediaqueries må huskes!-->
-                        <img src="bilder/relaterte-250x250.png" alt="Beige maxi-kjole"> <!-- Finn bedre alt, evt størrelse også. -->
+                        <img src="bilder/relaterte-250x250.png" alt="Beige maxi-kjole" itemprop="image"> <!-- Finn bedre alt, evt størrelse også. -->
                     </picture>
                     <i class="fa-regular fa-heart favoritt"></i>
 
-                    <a href="product.html">Product name</a>     <!-- Riktig lenking? -->
+                    <a href="product.html"><span itemprop="name">Product name</span></a>     <!-- Riktig lenking? -->
 
                                                     <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
-                    <p>Kr 1900,-</p>
-
+                    <article itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                        <meta itemprop="priceCurrency" content="NOK">
+                        <p itemprop="price" content="1900">Kr 1900,-</p>
+                    </article>
                     <ol>                             <!-- !! microdata !! -->
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-solid fa-star"></i></li>
@@ -382,18 +391,20 @@
                         <li>842 Reviews</li> <!-- !! microdata !! -->
                     </ol>    
                 </article>
-                <article class="relaterte-produkter">
+                <article class="relaterte-produkter" itemprop="isRelatedTo">
                     <picture>
                         <!-- <source> for mediaqueries må huskes!-->
-                        <img src="bilder/relaterte-250x250.png" alt="Beige maxi-kjole"> <!-- Finn bedre alt, evt størrelse også. -->
+                        <img src="bilder/relaterte-250x250.png" alt="Beige maxi-kjole" itemprop="image"> <!-- Finn bedre alt, evt størrelse også. -->
                     </picture>
                     <i class="fa-regular fa-heart favoritt"></i>
 
-                    <a href="product.html">Product name</a>     <!-- Riktig lenking? -->
+                    <a href="product.html"><span itemprop="name">Product name</span></a>     <!-- Riktig lenking? -->
 
                                                     <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
-                    <p>Kr 1900,-</p>
-
+                    <article itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                        <meta itemprop="priceCurrency" content="NOK">
+                        <p itemprop="price" content="1900">Kr 1900,-</p>
+                    </article>
                     <ol>                             <!-- !! microdata !! -->
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-solid fa-star"></i></li>
@@ -403,18 +414,20 @@
                         <li>842 Reviews</li> <!-- !! microdata !! -->
                     </ol>    
                 </article>
-                <article class="relaterte-produkter">
+                <article class="relaterte-produkter" itemprop="isRelatedTo">
                     <picture>
                         <!-- <source> for mediaqueries må huskes!-->
-                        <img src="bilder/relaterte-250x250.png" alt="Beige maxi-kjole"> <!-- Finn bedre alt, evt størrelse også. -->
+                        <img src="bilder/relaterte-250x250.png" alt="Beige maxi-kjole" itemprop="image"> <!-- Finn bedre alt, evt størrelse også. -->
                     </picture>
                     <i class="fa-regular fa-heart favoritt"></i>
 
-                    <a href="product.html">Product name</a>     <!-- Riktig lenking? -->
+                    <a href="product.html"><span itemprop="name">Product name</span></a>     <!-- Riktig lenking? -->
 
                                                     <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
-                    <p>Kr 1900,-</p>
-
+                    <article itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                        <meta itemprop="priceCurrency" content="NOK">
+                        <p itemprop="price" content="1900">Kr 1900,-</p>
+                    </article>
                     <ol>                             <!-- !! microdata !! -->
                         <li><i class="fa-solid fa-star"></i></li>
                         <li><i class="fa-solid fa-star"></i></li>
@@ -429,19 +442,20 @@
         <aside id="hopp-opp">
             <a href="#toppen" class="hopp-til-toppen">Hopp til toppen</a>
         </aside>
+        
         <footer id="global-footer">   
-            <section id="footer-ingress">
-                <img src="bilder/logo1c1c1c.png" alt="Bedriftens logo" width="65">   <!-- bedre alt -->
-                <p>
+            <section id="footer-ingress" itemscope itemtype="https://schema.org/Organization">
+                <img src="bilder/logo1c1c1c.png" alt="Bedriftens logo" width="65" itemprop="logo">   <!-- bedre alt -->
+                <p itemprop="slogan">
                     At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis. 
                 </p>
             </section>
-            <section id="footer-kontakt">
+            <section id="footer-kontakt" itemscope itemtype="https://schema.org/Organization">
                 <h4 id="kontaktOss">KONTAKT</h4>
-                <ul>
-                    <li><i class="fa-solid fa-location-dot"></i><span>Adresse:</span>B R A Veien 4, 1757 Halden</li> <!-- Er det en egen href for adresse?-->
-                    <li><i class="fa-solid fa-phone"></i><span>Telefon:</span><a href="tel:+469608000">(+47) 69 60 80 00</a></li>
-                    <li><i class="fa-solid fa-envelope"></i><span>E-post:</span> <a href="mailto:halden@hiof.no">halden@hiof.no</a></li>
+                <ul itemprop="contactPoint" itemscope itemtype="https://schema.org/PostalAddress">
+                    <li itemprop="streetAddress"><i class="fa-solid fa-location-dot"></i><span>Adresse:</span>B R A Veien 4, 1757 Halden</li> <!-- Er det en egen href for adresse?-->
+                    <li itemprop="telephone"><i class="fa-solid fa-phone"></i><span>Telefon:</span><a href="tel:+469608000">(+47) 69 60 80 00</a></li>
+                    <li itemprop="email"><i class="fa-solid fa-envelope"></i><span>E-post:</span> <a href="mailto:halden@hiof.no">halden@hiof.no</a></li>
                     <li><i class="fa-solid fa-clock"></i><p><span>Åpningstider:</span> Stenger 15:00</p></li>
                 </ul>
             </section>

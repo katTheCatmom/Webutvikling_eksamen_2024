@@ -25,7 +25,7 @@
     </nav>
     <div id="container">
         <header class="global-header">
-            <form id="toppen"> <!-- Method? -->
+            <form method="get" id="toppen">
                 <label aria-label="Søkefelt for nettstedet"> <!-- UU tiltak gjort, basert på wave.webaim.org sin analyse (aria-label)-->
                     <input type="search" placeholder="søk her" id="search" maxlength="50">
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -266,19 +266,20 @@
             <aside id="hopp-opp">
                 <a href="#toppen" class="hopp-til-toppen">Hopp til toppen</a>
             </aside>
+            
             <footer id="global-footer">   
-                <section id="footer-ingress">
-                    <img src="bilder/logo1c1c1c.png" alt="Bedriftens logo" width="65">   <!-- bedre alt -->
-                    <p>
+                <section id="footer-ingress" itemscope itemtype="https://schema.org/Organization">
+                    <img src="bilder/logo1c1c1c.png" alt="Bedriftens logo" width="65" itemprop="logo">   <!-- bedre alt -->
+                    <p itemprop="slogan">
                         At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis. 
                     </p>
                 </section>
-                <section id="footer-kontakt">
+                <section id="footer-kontakt" itemscope itemtype="https://schema.org/Organization">
                     <h4 id="kontaktOss">KONTAKT</h4>
-                    <ul>
-                        <li><i class="fa-solid fa-location-dot"></i><span>Adresse:</span>B R A Veien 4, 1757 Halden</li> <!-- Er det en egen href for adresse?-->
-                        <li><i class="fa-solid fa-phone"></i><span>Telefon:</span><a href="tel:+469608000">(+47) 69 60 80 00</a></li>
-                        <li><i class="fa-solid fa-envelope"></i><span>E-post:</span> <a href="mailto:halden@hiof.no">halden@hiof.no</a></li>
+                    <ul itemprop="contactPoint" itemscope itemtype="https://schema.org/PostalAddress">
+                        <li itemprop="streetAddress"><i class="fa-solid fa-location-dot"></i><span>Adresse:</span>B R A Veien 4, 1757 Halden</li> <!-- Er det en egen href for adresse?-->
+                        <li itemprop="telephone"><i class="fa-solid fa-phone"></i><span>Telefon:</span><a href="tel:+469608000">(+47) 69 60 80 00</a></li>
+                        <li itemprop="email"><i class="fa-solid fa-envelope"></i><span>E-post:</span> <a href="mailto:halden@hiof.no">halden@hiof.no</a></li>
                         <li><i class="fa-solid fa-clock"></i><p><span>Åpningstider:</span> Stenger 15:00</p></li>
                     </ul>
                 </section>
