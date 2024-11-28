@@ -3,12 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- For SEO -->
+    <meta name="description" content="Vakker kjole av MERKENAVN. Skill deg ut på festen. Perfekt for julebordsesongen.">
+    <meta name="keywords" content="kjole, MERKENAVN">
+    <!-- SEO slutt -->
+    
+    <!-- Font Awesome -->
     <link href="ikoner/css/fontawesome.css" rel="stylesheet"> 
     <link href="ikoner/css/brands.css" rel="stylesheet">
     <link href="ikoner/css/solid.css" rel="stylesheet">
     <link href="ikoner/css/regular.css" rel="stylesheet">
+    <!-- Font Awesome slutt -->
     <link rel="stylesheet" href="style.css">
-    <title>Produkt</title>
+    <title>MERKENAVN - Beige kjole</title> <!-- Istedenfor "produktside" for bedre SEO -->
 </head>
 <body>
     <nav class="skip-to-content">
@@ -23,10 +30,9 @@
     </nav>
     <div id="container">
         <header class="global-header">
-            <form id="toppen"> <!-- Method? -->
-                <!-- Lurt med label? (mtp høytopplesning)-->
-                <label>
-                    <input type="search" placeholder="søk her" id="search">
+            <form method="get" id="toppen">
+                <label aria-label="Søkefelt for nettstedet"> <!-- UU tiltak gjort, basert på wave.webaim.org sin analyse (aria-label)-->
+                    <input type="search" placeholder="søk her" id="search" maxlength="50">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </label>
             </form>
@@ -46,62 +52,72 @@
             <ul id="header-ikonmeny">
                 <li><i class="fa-regular fa-user"></i></li> <!-- User icon-->
                 <li><i class="fa-regular fa-heart"></i></li> <!-- Heart icon -->
-                <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li> <!-- Shopping cart-->
+                <li><a href="checkout.html" aria-label="handlevogn"><i class="fa-solid fa-cart-shopping"></i></a></li> <!-- UU tiltak gjort, basert på wave.webaim.org sin analyse (aria-label)-->
             </ul>
         </header>
 
         <nav id="breadcrumbs">
-            <ol>
-                <li>
-                    <a href="index.html">Hjem</a>
+            <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a href="index.html" itemprop="item">
+                        <span itemprop="name">Hjem</span>
+                    </a>
+                    <meta itemprop="position" content="1">
                 </li>
                 <li><i class="fa-solid fa-angle-right"></i></li>
                 <li>
-                    <a href="index.html#kategorier">Kategori</a> <!-- Dobbeltsjekk at det er hit man skal linke-->
+                    <a href="index.html#kategorier" itemprop="item">
+                        <span itemprop="name">Kategori</span>
+                    </a>
+                    <meta itemprop="position" content="2">
                 </li>
                 <li><i class="fa-solid fa-angle-right"></i></li>
                 <li id="current-location">
-                    <a href="product.html">Produktnavn</a>
+                    <a href="product.html" itemprop="item">
+                        <span itemprop="name">Produktnavn</span>
+                    </a>
+                    <meta itemprop="position" content="3">
                 </li>
             </ol>
         </nav>
-        <main id="produktside">
+        <main id="produktside" itemscope itemtype="https://schema.org/Product">
             <section id="bildegalleri"> 
                 <picture id="liten-en">
                     <source srcset="bilder/produktside-997x1169.png" media="(min-width:800px)">
-                    <img src="bilder/produktside-150x178.png"  alt="produktbilde">
+                    <img src="bilder/produktside-150x178.png"  alt="Detaljbilde av kjolen" itemprop="image">
                 </picture>
                 <picture id="liten-to">
                     <source srcset="bilder/produktside-997x1169.png" media="(min-width:800px)">
-                    <img src="bilder/produktside-150x178.png" alt="produktbilde">
+                    <img src="bilder/produktside-150x178.png" alt="Detaljbilde av kjolen" itemprop="image">
                 </picture>
                 <picture id="liten-tre">
                     <source srcset="bilder/produktside-997x1169.png" media="(min-width:800px)">
-                    <img src="bilder/produktside-150x178.png" alt="produktbilde">
+                    <img src="bilder/produktside-150x178.png" alt="Detaljbilde av kjolen" itemprop="image">
                 </picture>
                 <picture id="hovedbilde">
                     <source srcset="bilder/produktside-997x1737.png" media="(min-width:800px)">
-                    <img src="bilder/produktside-150x261.png" alt="produktbilde">
+                    <img src="bilder/produktside-150x261.png" alt="Fullskala bilde av den beige kjole" itemprop="image">
                 </picture>
             </section>
 
             <section id="produktinformasjon">             
                 <header>
-                    <h1>Produktnavn</h1>
-                    <h3 id="merkenavn"><a href="index.html#produkter">MERKENAVN</a></h3>    <!-- Fiks lenke, ikke #-->
+                    <h1 itemprop="name">Produktnavn</h1>
+                    <h3 id="merkenavn" itemprop="brand"><a href="index.html#produkter">MERKENAVN</a></h3>
                 </header> 
-                <ul>
-                    <li><p>5 195 kr inkl. mva.</p></li>
-                    <li><p>Farge: <span>Beige</span></p></li>
-                </ul>
+                <article class="pris-farge" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                    <meta itemprop="priceCurrency" content="NOK">
+                    <p><span itemprop="price" content="5195">5 195</span>kr inkl. mva.</p>
+                    <p>Farge: <span class="farge">Beige</span></p>
+                </article>
 
                 <!-- Nedtrekksmeny (valg av strl). Hentet fra forelesning uke44, 01.11  -->
                 <section>
                     <form id="handlevalg">
-                        <label for="size"></label>
-                        <select name="size" id="size">
-                            <option value="Velg størrelse">Velg størrelse</option>
-                            <option value="XS">XS</option>      <!-- Sjekk om det er "lovlige" values-->
+                        <label for="size" aria-label="Valg av størrelse"></label> <!-- UU tiltak gjort, basert på wave.webaim.org sin analyse (aria-label)-->
+                        <select name="size" id="size" required>
+                            <option value="">Velg størrelse</option> <!-- HTML-validator ga error ved innhold i value, ba om tom. Dette siden <select> er required-->
+                            <option value="XS">XS</option>
                             <option value="S">S</option>
                             <option value="M">M</option>
                             <option value="L">L</option>
@@ -109,7 +125,7 @@
                         </select>
                         <article>
                             <button id="handlekurv">Legg til i handlekurv</button>
-                            <button id="favoritt"><i class="fa-regular fa-heart fa-lg"></i></button>
+                            <button id="favoritt" aria-label="Legg til i favoritter"><i class="fa-regular fa-heart fa-lg"></i></button> <!-- UU tiltak gjort, basert på wave.webaim.org sin analyse (aria-label)-->
                         </article>
                     </form>
                 </section>
@@ -117,7 +133,7 @@
                 <section id="detaljer">
                     <details>
                         <summary>Materiale og vedlikehold<i class="fa-regular fa-plus"></i></summary>
-                        <ul>
+                        <ul itemprop="description">
                             <li>
                                 <p>Overmateriale: 95% viskose, 5% elastan</p>
                             </li>
@@ -132,7 +148,7 @@
                 
                     <details>
                         <summary>Produktdetaljer<i class="fa-regular fa-plus"></i></summary>
-                        <p class="produktdetaljer">Maecenas rhoncus scelerisque ex vel placerat. Proin quis tellus turpis. Pellentesque eget dolor ornare, blandit ligula vitae, fringilla quam. Maecenas lectus massa, eleifend ac elit ut, eleifend sollicitudin justo. Sed tempus eget metus vitae pulvinar. Nam molestie massa vitae euismod vulputate.</p>
+                        <p class="produktdetaljer" itemprop="description">Maecenas rhoncus scelerisque ex vel placerat. Proin quis tellus turpis. Pellentesque eget dolor ornare, blandit ligula vitae, fringilla quam. Maecenas lectus massa, eleifend ac elit ut, eleifend sollicitudin justo. Sed tempus eget metus vitae pulvinar. Nam molestie massa vitae euismod vulputate.</p>
                     </details>
 
                     <details>
@@ -144,13 +160,14 @@
                             merke og modell.
                         </p>
                         <table>
+                            <caption>Størrelsestabell</caption>
                             <thead>
                                 <tr>
-                                    <th>EU</th>
-                                    <th>INT</th>
-                                    <th>BRYSTVIDDE</th>
-                                    <th>LIVVIDDE</th>
-                                    <th>HOFTEMÅL</th>
+                                    <th scope="col">EU</th>
+                                    <th scope="col">INT</th>
+                                    <th scope="col">BRYSTVIDDE</th>
+                                    <th scope="col">LIVVIDDE</th>
+                                    <th scope="col">HOFTEMÅL</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -267,7 +284,9 @@
                     <details>
                         <summary>
                             Anmeldelser
-                            <span>
+                            <span itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                                <meta itemprop="reviewCount" content="32">
+                                <meta itemprop="ratingValue" content="4">
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star"></i>
@@ -276,19 +295,17 @@
                                 32
                             </span>
                         </summary>
-                        <article id="produkt-anmelder">
-                            <p>Mari Coon</p>
-                            <p>2024-10-02</p> <!-- Egen tag for tid? -->
-                            <ol>
-                                <li>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </li>
-                            </ol>
-                            <p>Duis risus sapien, sagittis non sapien condimentum, lacinia fermentum neque. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                        <article id="produkt-anmelder" itemprop="review" itemscope itemtype="https://schema.org/Review">
+                            <p itemprop="author">Mari Coon</p>
+                            <p itemprop="datePublished">2024-10-02</p> <!-- Egen tag for tid? -->
+                            <span itemprop="ratingValue" content="3">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </span>
+                            <p itemprop="reviewBody">Duis risus sapien, sagittis non sapien condimentum, lacinia fermentum neque. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
                         </article>
                     </details>
                 </section>
@@ -305,7 +322,7 @@
                 <article class="relaterte-produkter">
                     <picture>
                         <!-- <source> for mediaqueries må huskes!-->
-                        <img src="bilder/relaterte-250x250.png" alt="Lignende produkter"> <!-- Finn bedre alt, evt størrelse også. -->
+                        <img src="bilder/relaterte-250x250.png" alt="Beige maxi-kjole"> <!-- Finn bedre alt, evt størrelse også. -->
                     </picture>
                     <i class="fa-regular fa-heart favoritt"></i>
 
@@ -326,7 +343,7 @@
                 <article class="relaterte-produkter">
                     <picture>
                         <!-- <source> for mediaqueries må huskes!-->
-                        <img src="bilder/relaterte-250x250.png" alt="Lignende produkter"> <!-- Finn bedre alt, evt størrelse også. -->
+                        <img src="bilder/relaterte-250x250.png" alt="Beige maxi-kjole"> <!-- Finn bedre alt, evt størrelse også. -->
                     </picture>
                     <i class="fa-regular fa-heart favoritt"></i>
 
@@ -347,7 +364,7 @@
                 <article class="relaterte-produkter">
                     <picture>
                         <!-- <source> for mediaqueries må huskes!-->
-                        <img src="bilder/relaterte-250x250.png" alt="Lignende produkter"> <!-- Finn bedre alt, evt størrelse også. -->
+                        <img src="bilder/relaterte-250x250.png" alt="Beige maxi-kjole"> <!-- Finn bedre alt, evt størrelse også. -->
                     </picture>
                     <i class="fa-regular fa-heart favoritt"></i>
 
@@ -368,7 +385,7 @@
                 <article class="relaterte-produkter">
                     <picture>
                         <!-- <source> for mediaqueries må huskes!-->
-                        <img src="bilder/relaterte-250x250.png" alt="Lignende produkter"> <!-- Finn bedre alt, evt størrelse også. -->
+                        <img src="bilder/relaterte-250x250.png" alt="Beige maxi-kjole"> <!-- Finn bedre alt, evt størrelse også. -->
                     </picture>
                     <i class="fa-regular fa-heart favoritt"></i>
 
@@ -389,7 +406,7 @@
                 <article class="relaterte-produkter">
                     <picture>
                         <!-- <source> for mediaqueries må huskes!-->
-                        <img src="bilder/relaterte-250x250.png" alt="Lignende produkter"> <!-- Finn bedre alt, evt størrelse også. -->
+                        <img src="bilder/relaterte-250x250.png" alt="Beige maxi-kjole"> <!-- Finn bedre alt, evt størrelse også. -->
                     </picture>
                     <i class="fa-regular fa-heart favoritt"></i>
 
@@ -441,10 +458,10 @@
             <section id="footer-sosialemedier">
                 <h4>SOSIALE MEDIER</h4>
                 <ul>
-                    <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram fa-lg"></i></a></li>
-                    <li><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook fa-lg"></i></a></li>
-                    <li><a href="https://no.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin fa-lg"></i></a></li>
-                    <li><a href="https://no.pinterest.com/" target="_blank"><i class="fa-brands fa-pinterest fa-lg"></i></a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank" aria-label="Link til vår instagramside"><i class="fa-brands fa-instagram fa-lg"></i></a></li>
+                    <li><a href="https://www.facebook.com/" target="_blank" aria-label="Link til vår facebookside"><i class="fa-brands fa-facebook fa-lg"></i></a></li>
+                    <li><a href="https://no.linkedin.com/" target="_blank" aria-label="Link til vår linkedinside"><i class="fa-brands fa-linkedin fa-lg"></i></a></li>
+                    <li><a href="https://no.pinterest.com/" target="_blank" aria-label="Link til vår pinterestside"><i class="fa-brands fa-pinterest fa-lg"></i></a></li>
                 </ul>
             </section>
         </footer>

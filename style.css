@@ -305,18 +305,15 @@ body {
                 display: flex;
                 flex-direction: row;
                 flex-wrap: nowrap;
-                gap: 1rem;
+                gap: 0.2rem;
                 
+                height: fit-content;
+                margin: 0;
+                font-weight: 700;
                 width: 100%;
                 padding: 0;
                 
                 list-style: none;
-
-                p {
-                    height: fit-content;
-                    margin: 0;
-                    font-weight: 700;
-                }
             }
         }
     }
@@ -550,13 +547,12 @@ body {
         }
     }
 
-    ul {
-        list-style: none;
+    .pris-farge {
         padding: 0;
 
-        span {
+        .farge {
             font-weight: 600;
-        }
+        } 
     }
 
     #handlevalg {
@@ -803,7 +799,7 @@ body {
             margin-top: 1.5rem;
         }
 
-        form {
+        .storrelse-og-antall {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
@@ -1600,7 +1596,7 @@ body {
                 width: 48.5% !important;
             }
 
-            #kortnummer {
+            .kortnummer {
                 width: 100% !important;
             }
 

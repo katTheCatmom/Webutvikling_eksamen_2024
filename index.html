@@ -3,12 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- For SEO -->
+    <meta name="description" content="En av Norges største nettbutikker. Stort utvalg av klær og interiør til hjemmet. Gode tilbud hver uke.">
+    <meta name="keywords" content="Netthandel, klær, interiør">
+    <!-- SEO slutt-->
+
+     <!-- Font Awesome -->
     <link href="ikoner/css/fontawesome.css" rel="stylesheet"> 
     <link href="ikoner/css/brands.css" rel="stylesheet">
     <link href="ikoner/css/solid.css" rel="stylesheet">
     <link href="ikoner/css/regular.css" rel="stylesheet">
+    <!-- Font Awesome slutt -->
     <link rel="stylesheet" href="style.css">
-    <title>Forside</title>
+    <title>["Firmanavn"] Forside</title> <!-- Firmanavn for bedre SEO -->
 </head>
 <body id="forside">
     <nav class="skip-to-content">
@@ -23,15 +30,14 @@
     </nav>
     <div id="container">
         <header class="global-header">
-            <form id="toppen"> <!-- Method? -->
-                <!-- Lurt med label? (mtp høytopplesning)-->
-                <label>
-                    <input type="search" placeholder="søk her" id="search">
+            <form method="get" id="toppen">
+                <label aria-label="Søkefelt for nettstedet"> <!-- UU tiltak gjort, basert på wave.webaim.org sin analyse (aria-label)-->
+                    <input type="search" placeholder="søk her" id="search" maxlength="50">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </label>
             </form>
             <nav>
-                <ul>        <!-- ENDRE LINKIN TIL RIKTIG KLASSE -->
+                <ul>      
                     <li><a href="index.html">Hjem</a></li>
                     <li><a href="index.html#produkter">Produkter</a></li>
                     <li class="logo">
@@ -46,7 +52,7 @@
             <ul id="header-ikonmeny">
                 <li><i class="fa-regular fa-user"></i></li> <!-- User icon-->
                 <li><i class="fa-regular fa-heart"></i></li> <!-- Heart icon -->
-                <li><a href="checkout.html"><i class="fa-solid fa-cart-shopping"></i></a></li> <!-- Shopping cart-->
+                <li><a href="checkout.html" aria-label="handlevogn"><i class="fa-solid fa-cart-shopping"></i></a></li> <!-- UU tiltak gjort, basert på wave.webaim.org sin analyse (aria-label)-->
             </ul>
         </header>
         <main>
@@ -58,8 +64,7 @@
                         nihil impedit quo minus id quod maxime placeat facere pssoimus
                     </p>
                     <a href="index.html#produkter" class="btn">Les mer</a>
-                    <!-- Kanskje mest hensiktsmessig å benytte <picture>. Husk Media queries-->
-                    <img src="bilder/header-forside-mobil.png" alt="slider"> <!-- !! bedre alt !! -->
+                    <img src="bilder/header-forside-mobil.png" alt="Ukens tilbud: 3 for 2 på puter">
                 </header> 
             </section>
 
@@ -73,7 +78,7 @@
                         nihil impedit quo minus id quod maxime placeat facere pssoimus
                     </p>
                     <a href="index.html#produkter" class="btn">Les mer</a>
-                    <img src="https://fastly.picsum.photos/id/267/3796/2541.jpg?hmac=JdZ9shPJrqSSggSM7Rv9hYGmlKeLYwQLtzYaCaCexJ0" alt="Første nyhet">
+                    <img src="https://fastly.picsum.photos/id/267/3796/2541.jpg?hmac=JdZ9shPJrqSSggSM7Rv9hYGmlKeLYwQLtzYaCaCexJ0" alt="Ukens tilbud, opp til 50% på alt">
                 </article>
             
                 <article id="slider-to">
@@ -82,7 +87,7 @@
                         nihil impedit quo minus id quod maxime placeat facere pssoimus
                     </p>
                     <a href="index.html#produkter" class="btn">Les mer</a>
-                    <img src="bilder/slider-forside-2.png" alt="Første nyhet">
+                    <img src="bilder/slider-forside-2.png" alt="Nye stoler til hjemmet">
                 </article>
                 
                 <article id="slider-tre">
@@ -91,7 +96,7 @@
                         nihil impedit quo minus id quod maxime placeat facere pssoimus
                     </p>
                     <a href="index.html#produkter" class="btn">Les mer</a>
-                    <img src="bilder/slider-forside-3.png" alt="Første nyhet">
+                    <img src="bilder/slider-forside-3.png" alt="Style hjemmet ditt enkelt med farger">
                 </article>
                 <i class="fa-solid fa-arrow-right"></i>
             </section>
@@ -117,131 +122,166 @@
                 <!-- Produktkort: -->
                 <!-- section i section: https://stackoverflow.com/questions/9916354/is-it-valid-to-have-a-section-tag-inside-another-section-tag -->
                 <section id="produkt-samling">
-                    <article class="product-card">
+                    <article class="product-card" itemscope itemtype="https://schema.org/Product">
                         <picture>
                             <source srcset="bilder/produktkort-desktop.png" media="(min-width:800px)">
-                            <img src="bilder/produktkort-mobil.png" alt="produktkort"> <!-- Finn bedre alt, evt størrelse også. -->
+                            <img src="bilder/produktkort-mobil.png" alt="Feminin klokke i sølv" itemprop="image"> <!-- Finn bedre alt, evt størrelse også. -->
                         </picture>
                         <i class="fa-regular fa-heart product-heart fa-lg"></i>
-                        <a href="product.html">Product name</a>
-                                  <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
-                        <p class="price">Kr 1900,-</p>
+                        <a href="product.html">
+                            <span itemprop="name">Product name</span> <!-- Kan ikke sette itemprop="name" direkte på <a>-->
+                        </a>
+                        
+                        <article itemprop="offers" itemscope itemtype="https://schema.org/Offer"> <!-- <article for å også få inn nødvendig <meta>-->
+                            <meta itemprop="priceCurrency" content="NOK">        
+                            <p class="price" itemprop="Price" content="1900">Kr 1900,-</p>
+                        </article>
 
-                        <ul class="reviews">                               <!-- !! microdata !! -->
-                            <li>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </li>     <!-- !! microdata !! -->
-                            <li><p>842 Reviews</p></li>
-                        </ul>
+                        <span class="reviews" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">                              
+                            <meta itemprop="reviewCount" content="842">
+                            <meta itemprop="ratingValue" content="4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            842 Reviews
+                        </span>
                     </article>
-                    <article class="product-card">
+
+                    <article class="product-card" itemscope itemtype="https://schema.org/Product">
                         <picture>
                             <source srcset="bilder/produktkort-desktop.png" media="(min-width:800px)">
-                            <img src="bilder/produktkort-mobil.png" alt="produktkort"> <!-- Finn bedre alt, evt størrelse også. -->
+                            <img src="bilder/produktkort-mobil.png" alt="Feminin klokke i sølv" itemprop="image"> <!-- Finn bedre alt, evt størrelse også. -->
                         </picture>
                         <i class="fa-regular fa-heart product-heart fa-lg"></i>
-                        <a href="product.html">Product name</a>
-                                  <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
-                        <p class="price">Kr 1900,-</p>
+                        <a href="product.html">
+                            <span itemprop="name">Product name</span> <!-- Kan ikke sette itemprop="name" direkte på <a>-->
+                        </a>
+                        
+                        <article itemprop="offers" itemscope itemtype="https://schema.org/Offer"> <!-- <article for å også få inn nødvendig <meta>-->
+                            <meta itemprop="priceCurrency" content="NOK">        
+                            <p class="price" itemprop="Price" content="1900">Kr 1900,-</p>
+                        </article>
 
-                        <ul class="reviews">                               <!-- !! microdata !! -->
-                            <li>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </li>     <!-- !! microdata !! -->
-                            <li><p>842 Reviews</p></li>
-                        </ul>
+                        <span class="reviews" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">                              
+                            <meta itemprop="reviewCount" content="842">
+                            <meta itemprop="ratingValue" content="4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            842 Reviews
+                        </span>
                     </article>
-                    <article class="product-card">
+
+                    <article class="product-card" itemscope itemtype="https://schema.org/Product">
                         <picture>
                             <source srcset="bilder/produktkort-desktop.png" media="(min-width:800px)">
-                            <img src="bilder/produktkort-mobil.png" alt="produktkort"> <!-- Finn bedre alt, evt størrelse også. -->
+                            <img src="bilder/produktkort-mobil.png" alt="Feminin klokke i sølv" itemprop="image"> <!-- Finn bedre alt, evt størrelse også. -->
                         </picture>
                         <i class="fa-regular fa-heart product-heart fa-lg"></i>
-                        <a href="product.html">Product name</a>
-                                  <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
-                        <p class="price">Kr 1900,-</p>
+                        <a href="product.html">
+                            <span itemprop="name">Product name</span> <!-- Kan ikke sette itemprop="name" direkte på <a>-->
+                        </a>
+                        
+                        <article itemprop="offers" itemscope itemtype="https://schema.org/Offer"> <!-- <article for å også få inn nødvendig <meta>-->
+                            <meta itemprop="priceCurrency" content="NOK">        
+                            <p class="price" itemprop="Price" content="1900">Kr 1900,-</p>
+                        </article>
 
-                        <ul class="reviews">                               <!-- !! microdata !! -->
-                            <li>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </li>     <!-- !! microdata !! -->
-                            <li><p>842 Reviews</p></li>
-                        </ul>
+                        <span class="reviews" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">                              
+                            <meta itemprop="reviewCount" content="842">
+                            <meta itemprop="ratingValue" content="4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            842 Reviews
+                        </span>
                     </article>
-                    <article class="product-card">
+
+                    <article class="product-card" itemscope itemtype="https://schema.org/Product">
                         <picture>
                             <source srcset="bilder/produktkort-desktop.png" media="(min-width:800px)">
-                            <img src="bilder/produktkort-mobil.png" alt="produktkort"> <!-- Finn bedre alt, evt størrelse også. -->
+                            <img src="bilder/produktkort-mobil.png" alt="Feminin klokke i sølv" itemprop="image"> <!-- Finn bedre alt, evt størrelse også. -->
                         </picture>
                         <i class="fa-regular fa-heart product-heart fa-lg"></i>
-                        <a href="product.html">Product name</a>
-                                  <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
-                        <p class="price">Kr 1900,-</p>
+                        <a href="product.html">
+                            <span itemprop="name">Product name</span> <!-- Kan ikke sette itemprop="name" direkte på <a>-->
+                        </a>
+                        
+                        <article itemprop="offers" itemscope itemtype="https://schema.org/Offer"> <!-- <article for å også få inn nødvendig <meta>-->
+                            <meta itemprop="priceCurrency" content="NOK">        
+                            <p class="price" itemprop="Price" content="1900">Kr 1900,-</p>
+                        </article>
 
-                        <ul class="reviews">                               <!-- !! microdata !! -->
-                            <li>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </li>     <!-- !! microdata !! -->
-                            <li><p>842 Reviews</p></li>
-                        </ul>
+                        <span class="reviews" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">                              
+                            <meta itemprop="reviewCount" content="842">
+                            <meta itemprop="ratingValue" content="4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            842 Reviews
+                        </span>
                     </article>
-                    <article class="product-card">
+
+                    <article class="product-card" itemscope itemtype="https://schema.org/Product">
                         <picture>
                             <source srcset="bilder/produktkort-desktop.png" media="(min-width:800px)">
-                            <img src="bilder/produktkort-mobil.png" alt="produktkort"> <!-- Finn bedre alt, evt størrelse også. -->
+                            <img src="bilder/produktkort-mobil.png" alt="Feminin klokke i sølv" itemprop="image"> <!-- Finn bedre alt, evt størrelse også. -->
                         </picture>
                         <i class="fa-regular fa-heart product-heart fa-lg"></i>
-                        <a href="product.html">Product name</a>
-                                  <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
-                        <p class="price">Kr 1900,-</p>
+                        <a href="product.html">
+                            <span itemprop="name">Product name</span> <!-- Kan ikke sette itemprop="name" direkte på <a>-->
+                        </a>
+                        
+                        <article itemprop="offers" itemscope itemtype="https://schema.org/Offer"> <!-- <article for å også få inn nødvendig <meta>-->
+                            <meta itemprop="priceCurrency" content="NOK">        
+                            <p class="price" itemprop="Price" content="1900">Kr 1900,-</p>
+                        </article>
 
-                        <ul class="reviews">                               <!-- !! microdata !! -->
-                            <li>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </li>     <!-- !! microdata !! -->
-                            <li><p>842 Reviews</p></li>
-                        </ul>
+                        <span class="reviews" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">                              
+                            <meta itemprop="reviewCount" content="842">
+                            <meta itemprop="ratingValue" content="4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            842 Reviews
+                        </span>
                     </article>
-                    <article class="product-card">
+
+                     <article class="product-card" itemscope itemtype="https://schema.org/Product">
                         <picture>
                             <source srcset="bilder/produktkort-desktop.png" media="(min-width:800px)">
-                            <img src="bilder/produktkort-mobil.png" alt="produktkort"> <!-- Finn bedre alt, evt størrelse også. -->
+                            <img src="bilder/produktkort-mobil.png" alt="Feminin klokke i sølv" itemprop="image"> <!-- Finn bedre alt, evt størrelse også. -->
                         </picture>
                         <i class="fa-regular fa-heart product-heart fa-lg"></i>
-                        <a href="product.html">Product name</a>
-                                  <!-- !! microdata !! -->    <!-- Se forelesning 01.11-->
-                        <p class="price">Kr 1900,-</p>
+                        <a href="product.html">
+                            <span itemprop="name">Product name</span> <!-- Kan ikke sette itemprop="name" direkte på <a>-->
+                        </a>
+                        
+                        <article itemprop="offers" itemscope itemtype="https://schema.org/Offer"> <!-- <article for å også få inn nødvendig <meta>-->
+                            <meta itemprop="priceCurrency" content="NOK">        
+                            <p class="price" itemprop="Price" content="1900">Kr 1900,-</p>
+                        </article>
 
-                        <ul class="reviews">                               <!-- !! microdata !! -->
-                            <li>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </li>     <!-- !! microdata !! -->
-                            <li><p>842 Reviews</p></li>
-                        </ul>
+                        <span class="reviews" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">                              
+                            <meta itemprop="reviewCount" content="842">
+                            <meta itemprop="ratingValue" content="4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            842 Reviews
+                        </span>
                     </article>
                 </section>
             </section>
@@ -302,10 +342,10 @@
                         <!-- Anmeldelser -->
             <section id="anmeldelser">
                 <h2>Anmeldelser</h2>
-                <section class="scroll-container">
-                    <article class="anmelder">
+                <section class="scroll-container" >
+                    <article class="anmelder" itemscope itemtype="https://schema.org/Review">
                         <img src="bilder/anmelder-100x100.png" alt="Anmelder">
-                        <h3 class="anm-navn">Mari Coon</h3> <!-- Oppgv.tekst sier "overskrift" -->
+                        <h3 class="anm-navn" itemprop="author">Mari Coon</h3> <!-- Oppgv.tekst sier "overskrift" -->
                         <ol>
                             <li>
                                 <i class="fa-solid fa-star"></i>
@@ -315,7 +355,6 @@
                                 <i class="fa-regular fa-star"></i>
                             </li>
                         </ol>
-                        <!-- Anmeldertekst -->
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce malesuada, erat et feugiat varius, 
                             nibh nulla venenatis quam, id ultricies quam libero quis ex. Nulla posuere arcu nec nibh dictum viverra.
                             Quisque ligula lorem, fringilla in est a, commodo sodales ipsum. Maecenas et efficitur lorem.
@@ -446,10 +485,10 @@
             <section id="footer-sosialemedier">
                 <h4>SOSIALE MEDIER</h4>
                 <ul>
-                    <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram fa-lg"></i></a></li>
-                    <li><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook fa-lg"></i></a></li>
-                    <li><a href="https://no.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin fa-lg"></i></a></li>
-                    <li><a href="https://no.pinterest.com/" target="_blank"><i class="fa-brands fa-pinterest fa-lg"></i></a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank" aria-label="Link til vår instagramside"><i class="fa-brands fa-instagram fa-lg"></i></a></li> <!-- UU tiltak gjort, basert på wave.webaim.org sin analyse (aria-label)-->
+                    <li><a href="https://www.facebook.com/" target="_blank" aria-label="Link til vår facebookside"><i class="fa-brands fa-facebook fa-lg"></i></a></li> <!-- UU tiltak gjort, basert på wave.webaim.org sin analyse (aria-label)-->
+                    <li><a href="https://no.linkedin.com/" target="_blank" aria-label="Link til vår linkedinside"><i class="fa-brands fa-linkedin fa-lg"></i></a></li> <!-- UU tiltak gjort, basert på wave.webaim.org sin analyse (aria-label)-->
+                    <li><a href="https://no.pinterest.com/" target="_blank" aria-label="Link til vår pinterestside"><i class="fa-brands fa-pinterest fa-lg"></i></a></li> <!-- UU tiltak gjort, basert på wave.webaim.org sin analyse (aria-label)-->
                 </ul>
             </section>
         </footer>
