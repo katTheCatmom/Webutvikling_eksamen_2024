@@ -1184,11 +1184,11 @@ body {
         margin-bottom: 2rem;
         
         form {
-            width: fit-content;
+            width: 20%;
         }
        
         nav {
-            width: fit-content;
+            width: 63%;
             
           
             ul {
@@ -1203,11 +1203,11 @@ body {
         }
 
         #header-ikonmeny {
-            width: fit-content;
+            width: 13%;
             align-items: center;
             gap: 1rem;
             
-            li:hover {
+            .fa-cart-shopping:hover {
                 font-size: x-large;
             }
         }
@@ -1645,6 +1645,11 @@ body {
         }
 
         #footer-sosialemedier {
+            width: 17%;
+            align-items: end;
+            h4 {
+                width: fit-content;
+            }
             ul {
                 li:hover {
                     a {
