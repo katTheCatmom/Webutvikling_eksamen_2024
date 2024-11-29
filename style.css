@@ -175,11 +175,6 @@ body {
                 text-decoration: none;
                 background-color: #ffffff;
                 border-radius: 30px;
-
-                &:hover {
-                    color: #ffffff;
-                    background-color: #000000;
-                }
             }
 
             img {
